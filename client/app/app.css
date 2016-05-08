@@ -3,7 +3,7 @@
  * Bootstrap Fonts
  */
 
-@font-face {
+ @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot');
   src: url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
@@ -16,7 +16,7 @@
  *Font Awesome Fonts
  */
 
-@font-face {
+ @font-face {
   font-family: 'FontAwesome';
   src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?v=4.1.0');
   src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'),
@@ -31,10 +31,53 @@
  * App-wide Styles
  */
 
-.browserupgrade {
+ .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
 }
 
+.navbar-color {
+  background-color: #3396D1;
+}
+
+.navbar-text-color {
+  color: white;
+}
+
+.navbar-padding {
+  padding: 10px;
+  margin-bottom: 0px;
+}
+
+.navbar-button-style {
+  padding: 7%;
+  background-color: #72BB46;
+  border: none;
+  border-radius: 5px;
+  margin: 1%;
+  color: white;
+}
+
+.navbar-textbox-style {
+  padding: 5%;
+  background-color: #F0F3F6;
+  border: none;
+  border-radius: 5px;
+  margin: 3%;
+  color: #AB9393;
+  max-width: 100%;
+}
+
+.navbar-text-style {
+  margin-top: 1%;
+  color: #3396D1;
+}
+
+.icon-space {
+  top: 15px;
+  right: 20px;
+  position: absolute;
+  color: #AB9393;
+}

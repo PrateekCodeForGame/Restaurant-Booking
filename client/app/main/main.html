@@ -1,28 +1,49 @@
-<header class="hero-unit" id="banner">
+<div class="home-background">
+  <header class="hero-unit home-background" id="banner" style="background-image: url('assets/images/homePageImage.png');">
+    <div class="container-fluid">
+      <h1>RESTURANGER SAMLADE UNDER ETT TAK</h1>
+      <p class="lead">BOKA BORD, BESTÄLL MAT FÖR AVHÄMTNING ELLER HEMKÖRNING. VILKET ALTERNATIV DU ÄN VÄLJER BLIR DET INTE ENKLARE ÄN SÅ HÄR!</p>
+      <div class="row lead-text">
+        <div class="col-md-2 navbar-text-style"></div>
+        <div class="col-md-2"><input class="navbar-textbox-style" type="text" ng-model="searchKeyword" placeholder="Sökord"></input></div>
+        <div class="col-md-2"><i class="glyphicon glyphicon-map-marker icon-space"></i><input class="navbar-textbox-style " type="text" ng-model="searchKeyword" placeholder="Position"></div>
+        <div class="col-md-2"><input class="navbar-textbox-style" type="text" ng-model="searchKeyword" placeholder="All Categories"></input></div>
+        <div class="col-md-2"><button class="navbar-button-style">Sök restaurang</button></div>
+        <div class="col-md-2 navbar-text-style"></div>
+      </div>
+    </div>
+  </header>
   <div class="container">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
-    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
-  </div>
-</header>
-
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Features:</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in $ctrl.awesomeThings">
-        <li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="$ctrl.deleteThing(thing)">&times;</button></a></li>
-      </ul>
+    <div class="row">
+      <div class="col-md-3 info-text">
+        <span><i class="glyphicon glyphicon-map-marker icon-style"></i></span>
+        <br />
+        <p class="info-header-style">Restauranger nära dig</p>
+        <br />
+        <p class="info-text-style">Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p>
+      </div>
+      <div class="col-md-3 info-text">
+        <span><i class="glyphicon glyphicon-credit-card icon-style"></i></span>
+        <br />
+        <p class="info-header-style">Unika erbjudanden</p>
+        <br />
+        <p class="info-text-style">Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p>
+      </div>
+      <div class="col-md-3 info-text">
+        <span><i class="glyphicon glyphicon-list-alt icon-style"></i></span>
+        <br />
+        <p class="info-header-style">Restauranger nära dig</p>
+        <br />
+        <p class="info-text-style">Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p>
+      </div>
     </div>
   </div>
-
-  <form class="thing-form">
-    <label>Syncs in realtime across clients</label>
-    <p class="input-group">
-      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="$ctrl.newThing">
-      <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" ng-click="$ctrl.addThing()">Add New</button>
-      </span>
-    </p>
-  </form>
+  <img src="assets/images/appDownload.jpg" width="100%">
+  <div class="logo-text">
+    <p>Plats för logo</p>
+    <br />
+    <p>Här kan man lägga till vilken text man vill, eller menyer eller dylikt</p>
+    <br />
+    <p>Skapad av oss för er!</p>
+  </div>
 </div>

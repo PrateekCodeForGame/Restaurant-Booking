@@ -4,13 +4,13 @@
 
 #banner {
   border-bottom: none;
-  margin-top: -20px;
 }
 
 #banner h1 {
-  font-size: 60px;
+  font-size: 50px;
   line-height: 1;
   letter-spacing: -1px;
+  margin-top: 5%;
 }
 
 .hero-unit {
@@ -24,4 +24,48 @@
 
 .navbar-text {
   margin-left: 15px;
+}
+
+.home-background {
+  background-size: cover; 
+  background-position: center;
+  background-color: #F0F3F6;
+}
+
+.lead-text {
+  margin: 5%;
+}
+
+.info-text {
+  background-color: white;
+  margin: 4%;
+}
+
+.icon-style {
+  font-size: 750%;
+  margin-left: 30%;
+  color: #3396D1;
+  padding-top: 10%;
+}
+
+.info-header-style {
+  text-align: center;
+  padding-top: 10%;
+  font-weight: bolder;
+  color: #877A8F;
+  font-size: large;
+}
+
+.info-text-style {
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  color: #877A8F;
+  font-size: initial;
+}
+
+.logo-text {
+  background-color: #2F3339;
+  color: white;
+  padding: 5%;
 }
