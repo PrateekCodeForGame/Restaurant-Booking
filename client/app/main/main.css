@@ -29,7 +29,7 @@
 .home-background {
   background-size: cover; 
   background-position: center;
-  background-color: #F0F3F6;
+  background-color: #EAEEF2;
 }
 
 .lead-text {
@@ -64,8 +64,67 @@
   font-size: initial;
 }
 
-.logo-text {
-  background-color: #2F3339;
-  color: white;
-  padding: 5%;
+.restaurant-list-heading {
+  text-align: center;
+  color: #877A8F;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.rating-style {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.restaurant-name {
+  background-color: white;
+  border-bottom: solid #3396D1 5px;
+}
+
+.user-rated {
+  padding: 10px;
+  padding-left: 0px;
+}
+
+.star-deal-logo {
+  margin: 15px;
+  padding: 10px;
+  background: #CCD3DA;
+  border-radius: 30px;
+}
+
+.star-deal-amount {
+  margin: 15px;
+  padding: 10px;
+}
+
+.star-deal-amount-float {
+  float: right;
+}
+
+.star-deal-course {
+  padding: 10px;
+}
+
+.app-download {
+  padding-top: 20px;
+}
+
+.star-deal-background {
+  background-color: #F4F6F8;
+  border-bottom: solid #3396D1 5px;
+  margin-bottom: 21px;
+}
+
+.star-logo {
+  color: #85959B;
+  margin-right: 5px;
+}
+
+.grow { 
+  transition: all .2s ease-in-out; 
+}
+
+.grow:hover { 
+  transform: scale(1.1); 
 }

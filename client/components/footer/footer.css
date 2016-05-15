@@ -1,4 +1,4 @@
-footer.footer {
+.footer-copyright {
   padding: 30px 0;
   background-color: #22262C;
   color: #515B6A;
@@ -6,4 +6,37 @@ footer.footer {
 
 .copyright-text {
 	float: left;
+}
+
+.logo-text {
+  background-color: #2F3339;
+  color: white;
+}
+
+.logo-text-header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.logo-text-header-top {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.social-media-links {
+  border: 5px solid white;
+  border-radius: 250px;
+  padding: 5px;
+  color: white;
+  margin: 15px;
+  float: right;
+}
+
+.app-download {
+  float: right;
+  padding: 10px;
+}
+
+.foooter-box {
+  margin: 0px;
 }

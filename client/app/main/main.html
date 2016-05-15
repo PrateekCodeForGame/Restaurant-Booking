@@ -7,7 +7,12 @@
         <div class="col-md-2 navbar-text-style"></div>
         <div class="col-md-2"><input class="navbar-textbox-style" type="text" ng-model="searchKeyword" placeholder="Sökord"></input></div>
         <div class="col-md-2"><i class="glyphicon glyphicon-map-marker icon-space"></i><input class="navbar-textbox-style " type="text" ng-model="searchKeyword" placeholder="Position"></div>
-        <div class="col-md-2"><input class="navbar-textbox-style" type="text" ng-model="searchKeyword" placeholder="All Categories"></input></div>
+        <div class="col-md-2">
+          <select class="navbar-dropdown-style" ui-select2 multiple ng-model="selectedTags" placeholder="All Categories">
+            <option value=""></option>
+            <option ng-repeat="number in countries" value="{{number}}">{{number}}</option>
+          </select>
+        </div>
         <div class="col-md-2"><button class="navbar-button-style">Sök restaurang</button></div>
         <div class="col-md-2 navbar-text-style"></div>
       </div>
@@ -15,21 +20,21 @@
   </header>
   <div class="container">
     <div class="row">
-      <div class="col-md-3 info-text">
+      <div class="col-md-3 info-text grow">
         <span><i class="glyphicon glyphicon-map-marker icon-style"></i></span>
         <br />
         <p class="info-header-style">Restauranger nära dig</p>
         <br />
         <p class="info-text-style">Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p>
       </div>
-      <div class="col-md-3 info-text">
+      <div class="col-md-3 info-text grow">
         <span><i class="glyphicon glyphicon-credit-card icon-style"></i></span>
         <br />
         <p class="info-header-style">Unika erbjudanden</p>
         <br />
         <p class="info-text-style">Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p>
       </div>
-      <div class="col-md-3 info-text">
+      <div class="col-md-3 info-text grow">
         <span><i class="glyphicon glyphicon-list-alt icon-style"></i></span>
         <br />
         <p class="info-header-style">Restauranger nära dig</p>
@@ -38,12 +43,98 @@
       </div>
     </div>
   </div>
-  <img src="assets/images/appDownload.jpg" width="100%">
-  <div class="logo-text">
-    <p>Plats för logo</p>
-    <br />
-    <p>Här kan man lägga till vilken text man vill, eller menyer eller dylikt</p>
-    <br />
-    <p>Skapad av oss för er!</p>
+  <div class="container">
+    <div class="row">
+      <h2 class="restaurant-list-heading">Utvalda restauranger</h2>
+    </div>
+    <div class="row">
+      <h3 class="restaurant-list-heading">Några av våra favoriter</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-3 grow">
+        <img src="{{imageUrl}}" width="100%" height="180px">
+        <div class="restaurant-name">
+          <div class="row">
+            <div class="col-md-6"><rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo></div>
+            <div class="col-md-6 user-rated"><p>({{usersRated}})</p></div>
+          </div>
+          <h5 class="rating-style">Smiths of smithfield, Dining Room</h5>
+        </div>
+        <div class="star-deal-background">
+          <div class="row">
+            <div class="col-md-5 star-deal-logo"><span class="star-logo"><i class="fa fa-star"></i></span>Star Deals</div>
+            <div class="col-md-4 star-deal-amount"><p class="star-deal-amount-float">£{{starDealPrice}}<p></div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h5 class="star-deal-course">{{starDeal}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 grow">
+        <img src="{{imageUrl}}" width="100%" height="180px">
+        <div class="restaurant-name">
+          <div class="row">
+            <div class="col-md-6"><rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo></div>
+            <div class="col-md-6 user-rated"><p>({{usersRated}})</p></div>
+          </div>
+          <h5 class="rating-style">Smiths of smithfield, Dining Room</h5>
+        </div>
+        <div class="star-deal-background">
+          <div class="row">
+            <div class="col-md-5 star-deal-logo"><span class="star-logo"><i class="fa fa-star"></i></span>Star Deals</div>
+            <div class="col-md-4 star-deal-amount"><p class="star-deal-amount-float">£{{starDealPrice}}<p></div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h5 class="star-deal-course">{{starDeal}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 grow">
+        <img src="{{imageUrl}}" width="100%" height="180px">
+        <div class="restaurant-name">
+          <div class="row">
+            <div class="col-md-6"><rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo></div>
+            <div class="col-md-6 user-rated"><p>({{usersRated}})</p></div>
+          </div>
+          <h5 class="rating-style">Smiths of smithfield, Dining Room</h5>
+        </div>
+        <div class="star-deal-background">
+          <div class="row">
+            <div class="col-md-5 star-deal-logo"><span class="star-logo"><i class="fa fa-star"></i></span>Star Deals</div>
+            <div class="col-md-4 star-deal-amount"><p class="star-deal-amount-float">£{{starDealPrice}}<p></div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h5 class="star-deal-course">{{starDeal}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 grow">
+        <img src="{{imageUrl}}" width="100%" height="180px">
+        <div class="restaurant-name">
+          <div class="row">
+            <div class="col-md-6"><rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo></div>
+            <div class="col-md-6 user-rated"><p>({{usersRated}})</p></div>
+          </div>
+          <h5 class="rating-style">Smiths of smithfield, Dining Room</h5>
+        </div>
+        <div class="star-deal-background">
+          <div class="row">
+            <div class="col-md-5 star-deal-logo"><span class="star-logo"><i class="fa fa-star"></i></span>Star Deals</div>
+            <div class="col-md-4 star-deal-amount"><p class="star-deal-amount-float">£{{starDealPrice}}<p></div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h5 class="star-deal-course">{{starDeal}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

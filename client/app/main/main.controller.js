@@ -2,41 +2,39 @@
 
 (function() {
 
-class MainController {
+  class MainController {
 
-  constructor($http, $scope, socket) {
-    this.$http = $http;
-    this.socket = socket;
-    this.awesomeThings = [];
+    constructor($http, $scope, socket) {
+      this.$http = $http;
+      this.socket = socket;
+      this.awesomeThings = [];
 
-    $scope.$on('$destroy', function() {
-      socket.unsyncUpdates('thing');
-    });
-  }
+      $scope.$on('$destroy', function() {
+        socket.unsyncUpdates('thing');
+      });
 
-  $onInit() {
-    this.$http.get('/api/things').then(response => {
-      this.awesomeThings = response.data;
-      this.socket.syncUpdates('thing', this.awesomeThings);
-    });
-  }
+      $scope.options = {
+        ratedFill: '#FBD033',
+        readOnly: true,
+        halfStar: false,
+        fullStar: false,
+        starWidth: "20px"
+      };
 
-  addThing() {
-    if (this.newThing) {
-      this.$http.post('/api/things', { name: this.newThing });
-      this.newThing = '';
+      $scope.rating = 4.5;
+      $scope.usersRated = 60;
+      $scope.imageUrl = "assets/images/restaurant.jpg";
+      $scope.starDealPrice = 22;
+      $scope.starDeal = "Steak, fries & a glass of Rioja for £22 per person"
+
+      $scope.countries = ["Afghanistan", "Pakistan", "India", "fghanistan", "Pakstan", "Idia", "Afghanitan", "Pastan", "dia"];
     }
   }
 
-  deleteThing(thing) {
-    this.$http.delete('/api/things/' + thing._id);
-  }
-}
-
-angular.module('restaurantBookingApp')
-  .component('main', {
-    templateUrl: 'app/main/main.html',
-    controller: MainController
-  });
+  angular.module('restaurantBookingApp')
+    .component('main', {
+      templateUrl: 'app/main/main.html',
+      controller: MainController
+    });
 
 })();
