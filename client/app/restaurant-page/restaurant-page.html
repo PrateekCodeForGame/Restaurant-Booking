@@ -1,0 +1,18 @@
+<div class="background-img home-background" ng-style="imagetest"></div>
+<div class="container top-space">
+  <div class="row">
+    <div class="col-md-8">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Menu 1</a></li>
+        <li><a href="#">Menu 2</a></li>
+        <li><a href="#">Menu 3</a></li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <ng-map center="{{coordinates}}" class="map-settings">
+        <marker position="{{coordinates}}"></marker>
+      </ng-map>
+    </div>
+  </div>
+</div>

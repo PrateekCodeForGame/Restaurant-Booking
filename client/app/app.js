@@ -12,7 +12,8 @@ angular.module('restaurantBookingApp', [
   'ui.bootstrap',
   'validation.match',
   'rateYo',
-  'ui.select2'
+  'ui.select2',
+  'ngMap'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

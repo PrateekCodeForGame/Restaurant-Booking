@@ -27,7 +27,7 @@
 }
 
 .home-background {
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
   background-color: #EAEEF2;
 }
@@ -79,6 +79,7 @@
 .restaurant-name {
   background-color: white;
   border-bottom: solid #3396D1 5px;
+  color: black;
 }
 
 .user-rated {
@@ -114,6 +115,7 @@
   background-color: #F4F6F8;
   border-bottom: solid #3396D1 5px;
   margin-bottom: 21px;
+  color: black;
 }
 
 .star-logo {
@@ -121,10 +123,10 @@
   margin-right: 5px;
 }
 
-.grow { 
-  transition: all .2s ease-in-out; 
+.grow {
+  transition: all .2s ease-in-out;
 }
 
-.grow:hover { 
-  transform: scale(1.1); 
+.grow:hover {
+  transform: scale(1.1);
 }

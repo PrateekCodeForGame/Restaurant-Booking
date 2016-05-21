@@ -26,6 +26,7 @@ module.exports = function(config) {
       'client/bower_components/angular-rating-yo/src/angular-rating-yo.js',
       'client/bower_components/select2/select2.js',
       'client/bower_components/angular-ui-select2/src/select2.js',
+      'client/bower_components/ngmap/build/scripts/ng-map.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'node_modules/socket.io-client/socket.io.js',

@@ -16,7 +16,8 @@
     "angular-ui-router": "~0.2.15",
     "angular-validation-match": "~1.5.2",
     "angular-rating-yo": "^1.0.0",
-    "angular-ui-select2": "^0.0.5"
+    "angular-ui-select2": "^0.0.5",
+    "ngmap": "^1.17.3"
   },
   "devDependencies": {
     "angular-mocks": "~1.5.0"

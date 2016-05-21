@@ -1,0 +1,12 @@
+.background-img {
+  height: 500px;
+  -webkit-filter: brightness(0.4);
+}
+
+.map-settings {
+  height: 300px;
+}
+
+.top-space {
+  margin-top: 20px;
+}

@@ -5,15 +5,21 @@
       <p class="lead">BOKA BORD, BESTÄLL MAT FÖR AVHÄMTNING ELLER HEMKÖRNING. VILKET ALTERNATIV DU ÄN VÄLJER BLIR DET INTE ENKLARE ÄN SÅ HÄR!</p>
       <div class="row lead-text">
         <div class="col-md-2 navbar-text-style"></div>
-        <div class="col-md-2"><input class="navbar-textbox-style" type="text" ng-model="searchKeyword" placeholder="Sökord"></input></div>
-        <div class="col-md-2"><i class="glyphicon glyphicon-map-marker icon-space"></i><input class="navbar-textbox-style " type="text" ng-model="searchKeyword" placeholder="Position"></div>
+        <div class="col-md-2">
+          <input class="navbar-textbox-style" type="text" ng-model="searchKeyword" placeholder="Sökord"></input>
+        </div>
+        <div class="col-md-2"><i class="glyphicon glyphicon-map-marker icon-space"></i>
+          <input class="navbar-textbox-style " type="text" ng-model="searchKeyword" placeholder="Position">
+        </div>
         <div class="col-md-2">
           <select class="navbar-dropdown-style" ui-select2 multiple ng-model="selectedTags" placeholder="All Categories">
             <option value=""></option>
             <option ng-repeat="number in countries" value="{{number}}">{{number}}</option>
           </select>
         </div>
-        <div class="col-md-2"><button class="navbar-button-style">Sök restaurang</button></div>
+        <div class="col-md-2">
+          <button class="navbar-button-style">Sök restaurang</button>
+        </div>
         <div class="col-md-2 navbar-text-style"></div>
       </div>
     </div>
@@ -52,18 +58,55 @@
     </div>
     <div class="row">
       <div class="col-md-3 grow">
+        <a ui-sref="restaurant-page">
+          <img src="{{imageUrl}}" width="100%" height="180px">
+          <div class="restaurant-name">
+            <div class="row">
+              <div class="col-md-6">
+                <rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo>
+              </div>
+              <div class="col-md-6 user-rated">
+                <p>({{usersRated}})</p>
+              </div>
+            </div>
+            <h5 class="rating-style">Smiths of smithfield, Dining Room</h5>
+          </div>
+          <div class="star-deal-background">
+            <div class="row">
+              <div class="col-md-5 star-deal-logo"><span class="star-logo"><i class="fa fa-star"></i></span>Star Deals</div>
+              <div class="col-md-4 star-deal-amount">
+                <p class="star-deal-amount-float">£{{starDealPrice}}
+                  <p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h5 class="star-deal-course">{{starDeal}}</h5>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 grow">
         <img src="{{imageUrl}}" width="100%" height="180px">
         <div class="restaurant-name">
           <div class="row">
-            <div class="col-md-6"><rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo></div>
-            <div class="col-md-6 user-rated"><p>({{usersRated}})</p></div>
+            <div class="col-md-6">
+              <rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo>
+            </div>
+            <div class="col-md-6 user-rated">
+              <p>({{usersRated}})</p>
+            </div>
           </div>
           <h5 class="rating-style">Smiths of smithfield, Dining Room</h5>
         </div>
         <div class="star-deal-background">
           <div class="row">
             <div class="col-md-5 star-deal-logo"><span class="star-logo"><i class="fa fa-star"></i></span>Star Deals</div>
-            <div class="col-md-4 star-deal-amount"><p class="star-deal-amount-float">£{{starDealPrice}}<p></div>
+            <div class="col-md-4 star-deal-amount">
+              <p class="star-deal-amount-float">£{{starDealPrice}}
+                <p>
+            </div>
           </div>
           <div class="row">
             <div class="col-md-12">
@@ -76,15 +119,22 @@
         <img src="{{imageUrl}}" width="100%" height="180px">
         <div class="restaurant-name">
           <div class="row">
-            <div class="col-md-6"><rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo></div>
-            <div class="col-md-6 user-rated"><p>({{usersRated}})</p></div>
+            <div class="col-md-6">
+              <rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo>
+            </div>
+            <div class="col-md-6 user-rated">
+              <p>({{usersRated}})</p>
+            </div>
           </div>
           <h5 class="rating-style">Smiths of smithfield, Dining Room</h5>
         </div>
         <div class="star-deal-background">
           <div class="row">
             <div class="col-md-5 star-deal-logo"><span class="star-logo"><i class="fa fa-star"></i></span>Star Deals</div>
-            <div class="col-md-4 star-deal-amount"><p class="star-deal-amount-float">£{{starDealPrice}}<p></div>
+            <div class="col-md-4 star-deal-amount">
+              <p class="star-deal-amount-float">£{{starDealPrice}}
+                <p>
+            </div>
           </div>
           <div class="row">
             <div class="col-md-12">
@@ -97,36 +147,22 @@
         <img src="{{imageUrl}}" width="100%" height="180px">
         <div class="restaurant-name">
           <div class="row">
-            <div class="col-md-6"><rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo></div>
-            <div class="col-md-6 user-rated"><p>({{usersRated}})</p></div>
-          </div>
-          <h5 class="rating-style">Smiths of smithfield, Dining Room</h5>
-        </div>
-        <div class="star-deal-background">
-          <div class="row">
-            <div class="col-md-5 star-deal-logo"><span class="star-logo"><i class="fa fa-star"></i></span>Star Deals</div>
-            <div class="col-md-4 star-deal-amount"><p class="star-deal-amount-float">£{{starDealPrice}}<p></div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <h5 class="star-deal-course">{{starDeal}}</h5>
+            <div class="col-md-6">
+              <rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo>
+            </div>
+            <div class="col-md-6 user-rated">
+              <p>({{usersRated}})</p>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-md-3 grow">
-        <img src="{{imageUrl}}" width="100%" height="180px">
-        <div class="restaurant-name">
-          <div class="row">
-            <div class="col-md-6"><rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo></div>
-            <div class="col-md-6 user-rated"><p>({{usersRated}})</p></div>
-          </div>
           <h5 class="rating-style">Smiths of smithfield, Dining Room</h5>
         </div>
         <div class="star-deal-background">
           <div class="row">
             <div class="col-md-5 star-deal-logo"><span class="star-logo"><i class="fa fa-star"></i></span>Star Deals</div>
-            <div class="col-md-4 star-deal-amount"><p class="star-deal-amount-float">£{{starDealPrice}}<p></div>
+            <div class="col-md-4 star-deal-amount">
+              <p class="star-deal-amount-float">£{{starDealPrice}}
+                <p>
+            </div>
           </div>
           <div class="row">
             <div class="col-md-12">
