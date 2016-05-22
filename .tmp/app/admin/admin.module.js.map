@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../client/app/admin/admin.module.js"],"names":[],"mappings":"AAAA;;AAEA,QAAQ,MAAR,CAAe,4BAAf,EAA6C,CAC3C,2BAD2C,EAE3C,WAF2C,CAA7C","file":"admin.module.js","sourcesContent":["'use strict';\n\nangular.module('restaurantBookingApp.admin', [\n  'restaurantBookingApp.auth',\n  'ui.router'\n]);\n"]}

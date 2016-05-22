@@ -2,11 +2,52 @@
   height: 500px;
   -webkit-filter: brightness(0.4);
 }
-
 .map-settings {
   height: 300px;
+  padding: 20px;
 }
-
 .top-space {
   margin-top: 20px;
+}
+.page-background {
+  background-color: #EAEEF2;
+}
+.component-background {
+  background-color: white;
+  margin-bottom: 20px;
+}
+.address-column {
+  font-family: serif;
+  color: #8196AE;
+  padding: 20px;
+  padding-top: 0px;
+}
+.address-column-link {
+  color: #8196AE;
+  font-weight: bolder;
+  text-decoration: none;
+}
+.social-media-link {
+  border: 1px solid white;
+  border-radius: 250px;
+  padding: 10px;
+  color: white;
+  margin: 10px;
+  float: left;
+  background-color: black;
+}
+.book-header {
+  margin: 20px;
+  font-size: 20px;
+  color: #8196AE;
+}
+.book-hr {
+  margin: 20px;
+  border: 1px solid;
+  color: #8196AE;
+}
+.book-subheader {
+  margin: 20px;
+  font-size: 15px;
+  color: #8196AE;
 }

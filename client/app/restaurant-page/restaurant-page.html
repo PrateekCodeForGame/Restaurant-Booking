@@ -1,18 +1,48 @@
-<div class="background-img home-background" ng-style="imagetest"></div>
-<div class="container top-space">
-  <div class="row">
-    <div class="col-md-8">
-      <ul class="nav nav-tabs">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Menu 1</a></li>
-        <li><a href="#">Menu 2</a></li>
-        <li><a href="#">Menu 3</a></li>
-      </ul>
-    </div>
-    <div class="col-md-4">
-      <ng-map center="{{coordinates}}" class="map-settings">
-        <marker position="{{coordinates}}"></marker>
-      </ng-map>
+<div class=" page-background">
+  <div class="background-img home-background" ng-style="imagetest"></div>
+  <div class="container top-space">
+    <div class="row">
+      <div class="col-md-7 component-background">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Menu 1</a></li>
+          <li><a href="#">Menu 2</a></li>
+          <li><a href="#">Menu 3</a></li>
+        </ul>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <div class="row component-background">
+          <ng-map center="{{coordinates}}" class="map-settings">
+            <marker position="{{coordinates}}"></marker>
+          </ng-map>
+          <div class="address-column">
+            <b>{{addressLine1}}</b>
+            <br/>
+            <b>{{addressLine2}}</b>
+            <br/>
+            <b>{{addressLine3}}</b>
+            <br/>
+            <br/>
+            <b><i class="fa fa-phone"></i> {{phone}}</b>
+            <br/>
+            <a href="{{websiteLink}}" class="address-column-link"><i class="fa fa-link"></i> {{website}}</a>
+            <br/>
+          </div>
+          <div>
+            <a href=""><i class="fa fa-twitter social-media-link"></i></a>
+            <a href=""><i class="fa fa-facebook-official social-media-link"></i></a>
+            <a href=""><i class="fa fa-youtube-square social-media-link"></i></a>
+            <a href=""><i class="fa fa-instagram social-media-link"></i></a>
+            <a href=""><i class="fa fa-google-plus social-media-link"></i></a>
+          </div>
+        </div>
+        <div class="row component-background">
+          <div class="book-header"><i class="fa fa-calendar-check-o"></i><b> Boka Online</b></div>
+          <hr class="book-hr">
+          <div class="book-subheader"><b> Boka Bord</b></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
