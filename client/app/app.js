@@ -14,7 +14,7 @@ angular.module('restaurantBookingApp', [
   'rateYo',
   'ui.select2',
   'ngMap',
-  'ui.bootstrap.datetimepicker'
+  'ui.bootstrap'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

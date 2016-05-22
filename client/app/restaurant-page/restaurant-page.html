@@ -41,6 +41,12 @@
           <div class="book-header"><i class="fa fa-calendar-check-o"></i><b> Boka Online</b></div>
           <hr class="book-hr">
           <div class="book-subheader"><b> Boka Bord</b></div>
+          <p class="input-group">
+            <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="bookingDate" is-open="datePopup.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+            <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="openDatePicker()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+          </p>
         </div>
       </div>
     </div>
