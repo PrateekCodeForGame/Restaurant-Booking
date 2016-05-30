@@ -13,6 +13,9 @@ angular.module('restaurantBookingApp').config(function ($stateProvider) {
   }).state('restaurant-page.restaurant-review', {
     url: '/restaurant-review',
     template: '<restaurant-review></restaurant-review>'
+  }).state('restaurant-page.restaurant-offers', {
+    url: '/restaurant-offers',
+    template: '<restaurant-offers></restaurant-offers>'
   });
 });
 //# sourceMappingURL=restaurant-page.js.map

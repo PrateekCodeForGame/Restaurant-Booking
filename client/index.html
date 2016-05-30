@@ -27,6 +27,7 @@
       <link rel="stylesheet" href="app/jquery.rateyo.css">
       <link rel="stylesheet" href="app/main/main.css">
       <link rel="stylesheet" href="app/restaurant-page/restaurant-menu.css">
+      <link rel="stylesheet" href="app/restaurant-page/restaurant-offers.css">
       <link rel="stylesheet" href="app/restaurant-page/restaurant-overview.css">
       <link rel="stylesheet" href="app/restaurant-page/restaurant-page.css">
       <link rel="stylesheet" href="app/restaurant-page/restaurant-review.css">
@@ -43,7 +44,7 @@
 
     <!-- Add your site or application content here -->
     <navbar></navbar>
-    <div ui-view=""></div>
+    <div ui-view="" autoscroll="true"></div>
     <footer></footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -84,10 +85,10 @@
     <!-- build:js(.tmp) app/app.js -->
       <script src="app/app.js"></script>
       <!-- injector:js -->
-      <script src="components/auth/auth.module.js"></script>
       <script src="app/admin/admin.module.js"></script>
+      <script src="components/auth/auth.module.js"></script>
       <script src="components/util/util.module.js"></script>
-      <script src="app/account/signup/signup.controller.js"></script>
+      <script src="app/restaurant-page/restaurant-review.controller.js"></script>
       <script src="app/admin/admin.controller.js"></script>
       <script src="app/account/account.js"></script>
       <script src="app/admin/admin.router.js"></script>
@@ -95,11 +96,12 @@
       <script src="app/main/main.controller.js"></script>
       <script src="app/main/main.js"></script>
       <script src="app/restaurant-page/restaurant-menu.controller.js"></script>
+      <script src="app/restaurant-page/restaurant-offers.controller.js"></script>
       <script src="app/restaurant-page/restaurant-overview.controller.js"></script>
       <script src="app/restaurant-page/restaurant-page.controller.js"></script>
       <script src="app/restaurant-page/restaurant-page.js"></script>
-      <script src="app/restaurant-page/restaurant-review.controller.js"></script>
       <script src="app/account/login/login.controller.js"></script>
+      <script src="app/account/settings/settings.controller.js"></script>
       <script src="components/auth/auth.service.js"></script>
       <script src="components/auth/interceptor.service.js"></script>
       <script src="components/auth/router.decorator.js"></script>
@@ -112,7 +114,7 @@
       <script src="components/oauth-buttons/oauth-buttons.controller.js"></script>
       <script src="components/oauth-buttons/oauth-buttons.directive.js"></script>
       <script src="components/socket/socket.service.js"></script>
-      <script src="app/account/settings/settings.controller.js"></script>
+      <script src="app/account/signup/signup.controller.js"></script>
       <script src="components/util/util.service.js"></script>
       <!-- endinjector -->
       <script src="http://maps.google.com/maps/api/js"></script>

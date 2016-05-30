@@ -12,6 +12,30 @@
 .page-background {
   background-color: #EAEEF2;
 }
+.title {
+  padding: 10px;
+}
+.restaurant-header {
+  position: absolute;
+  top: 350px;
+  color: white;
+  font-weight: bolder;
+  width: 100%
+}
+.restaurant-title {
+  font-size: 30px;
+  font-family: sans-serif;
+}
+.restaurant-options {
+  font-size: 9px;
+  padding-top: 5px;
+}
+.restaurant-rating {
+  padding: 0px;
+}
+.restaurant-review {
+  margin-left: 25px;
+}
 .component-background {
   background-color: white;
   margin-bottom: 20px;
@@ -50,4 +74,18 @@
   margin: 20px;
   font-size: 15px;
   color: #8196AE;
+}
+.book-options {
+  width: 40%;
+  padding: 5px;
+  margin: 10px;
+}
+.book-date {
+  margin: 30px;
+}
+.book-border {
+  border: solid 1px #8196AE;
+}
+.nav-background {
+  background-color: white;
 }

@@ -1,14 +1,44 @@
 <div class=" page-background">
-  <div class="background-img home-background" ng-style="imagetest"></div>
+  <div class="background-img home-background" ng-style="imagetest">
+  </div>
+  <div class="container">
+    <div class="restaurant-header">
+      <div class="row restaurant-title title">{{restaurantName}}</div>
+      <div class="row title">
+        <div class="col-md-3">
+          <p>{{addressLine1}}</p>
+          <p>{{addressLine2}}</p>
+          <p>{{addressLine3}}</p>
+        </div>
+        <div class="col-md-1">
+          <span><i class="fa fa-truck fa-3x"></i></span>
+          <p class="restaurant-options">Hemkorning</p>
+        </div>
+        <div class="col-md-2">
+          <span><i class="fa fa-support fa-3x"></i></span>
+          <p class="restaurant-options">Boka bord</p>
+        </div>
+      </div>
+      <div class="row title">
+        <div class="col-md-1">
+          <rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="restaurant-rating"></rate-yo>
+        </div>
+        <div class="col-md-3 restaurant-review">
+          <p>({{peopleRated}} Reviews)</p>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container top-space">
     <div class="row">
-      <div class="col-md-7 component-background">
-        <ul class="nav nav-tabs">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Menu 1</a></li>
-          <li><a href="#">Menu 2</a></li>
-          <li><a href="#">Menu 3</a></li>
+      <div class="col-md-7">
+        <ul class="nav nav-tabs nav-background">
+          <li><a ui-sref=".restaurant-overview" class="active">Overslkt</a></li>
+          <li><a ui-sref=".restaurant-menu">Meny</a></li>
+          <li><a ui-sref=".restaurant-review">Recensioner</a></li>
+          <li><a ui-sref=".restaurant-offers">Erbjudanden</a></li>
         </ul>
+        <div ui-view=""></div>
       </div>
       <div class="col-md-1"></div>
       <div class="col-md-4">
@@ -38,17 +68,39 @@
           </div>
         </div>
         <div class="row component-background">
-          <div class="book-header"><i class="fa fa-calendar-check-o"></i><b> Boka Online</b></div>
+          <div class="book-header"><i class="fa fa-calendar-check-o"></i><b>  Boka Online</b></div>
           <hr class="book-hr">
           <div class="book-subheader"><b> Boka Bord</b></div>
-          <p class="input-group">
-            <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="bookingDate" is-open="datePopup.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
-            <span class="input-group-btn">
-            <button type="button" class="btn btn-default" ng-click="openDatePicker()"><i class="glyphicon glyphicon-calendar"></i></button>
-          </span>
-          </p>
+          <div class="book-subheader book-border">
+            <select class="book-options" ng-options="number for number in tableFor" ng-model="selectedTableNumber">
+              <option value="" disabled selected style="display: none;">Personer</option>
+            </select>
+            <select class="book-options" ng-options="time for time in timings" ng-model="selectedTime">
+              <option value="" disabled selected style="display: none;">Bokning tid</option>
+            </select>
+            <p class="input-group book-date">
+              <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="bookingDate" is-open="datePopup.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="openDatePicker()"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+          </div>
+          <div class="book-subheader"><b>Tid</b></div>
+          <div class="book-subheader"><b>Valj ett datum ovan for att see tillgangliga tider</b></div>
+          <div class="book-subheader">
+            <button class="navbar-button-style">Book now</button>
+          </div>
+        </div>
+        <div class="row component-background">
+          <div class="book-header"><i class="fa fa-clock-o"></i><b>  Oppetider</b></div>
+          <hr class="book-hr">
+          <div class="row book-subheader" ng-repeat="day in days">
+            <div class="col-md-1"></div>
+            <div class="col-md-3"><b>{{day.day}}</b></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-7">{{day.time}}</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>

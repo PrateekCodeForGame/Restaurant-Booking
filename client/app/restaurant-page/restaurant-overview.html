@@ -1,1 +1,34 @@
-<div>This is the restaurant-overview view.</div>
+<div class="component-background main-image">
+  <div class="row main-image"><img src="assets/images/{{mainImage}}" width="100%" height="350px"></div>
+  <div class="row other-image">
+    <div class="col-md-3" ng-repeat="i in getNumber() track by $index">
+      <img src="assets/images/{{imageUrl[$index+1]}}" width="100%" height="128.13px">
+    </div>
+  </div>
+  <hr class="lines">
+  <div class="row facilities other-image">
+    <div class="col-md-3 facilities-padding"><span><i class="fa fa-life-bouy"></i> Latt tillganglig</span></div>
+    <div class="col-md-3 facilities-padding"><span><i class="fa fa-credit-card"></i> Kredit kort</span></div>
+    <div class="col-md-3 facilities-padding"><span><i class="fa fa-truck"></i> Hemkorning</span></div>
+    <div class="col-md-3 facilities-padding"><span><i class="fa fa-umbrella"></i> Uteservering</span></div>
+    <div class="col-md-3 facilities-padding"><span><i class="fa fa-car"></i> Parkering</span></div>
+    <div class="col-md-3 facilities-padding"><span><i class="fa fa-calendar-o"></i> Bordsbokning</span></div>
+    <div class="col-md-3 facilities-padding"><span><i class="fa fa-cutlery"></i> Avhamtning</span></div>
+    <div class="col-md-3 facilities-padding"><span><i class="fa fa-thumbs-up"></i> Gastvanligt</span></div>
+    <div class="col-md-3 facilities-padding"><span><i class="fa fa-wifi"></i> WiFi</span></div>
+    <div class="col-md-3 facilities-padding"><span><i class="fa fa-beer"></i> Fullstandiga rattigheter</span></div>
+  </div>
+  <hr class="lines">
+  <div class="book-header"><i class="fa fa-list-alt"></i><b>  Sammanfattning</b></div>
+  <hr class="lines">
+  <div class="row summary-text">
+    <p>
+      The highly anticipated 14,500 sq ft flagship O&B Café Grill opened in June 2010. With a stylish "see and be seen" bar, lounge and a wraparound patio facing both Front and Yonge streets, it has since become the destination for the city’s tastemakers, Bay
+      Street’s movers and shakers and the urban dwellers of the neighbourhood.
+    </p>
+    <p>
+      The design of the restaurant is a multi-faceted collaboration between Chef Michael Bonacini and Anacleto Design who has transformed the vast space into intimate gathering spots including the restaurant, bar, and patio with a communal table, tucked away
+      booths, and a loft like dining room. “We took a massive space and infused it with character, charm and charisma through art, lighting and texture,” says designer Lindsey Anacleto a former associate at Yabu Pushelberg, who designed Canoe for O&B.
+    </p>
+  </div>
+</div>

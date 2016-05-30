@@ -3,10 +3,20 @@
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 (function () {
-  var RestaurantOverviewComponent = function RestaurantOverviewComponent() {
+  var RestaurantOverviewComponent = function RestaurantOverviewComponent($scope) {
     _classCallCheck(this, RestaurantOverviewComponent);
 
-    this.message = 'Hello';
+    $scope.imageUrl = ["restaurant.jpg", "restaurant-overview.jpg", "restaurant.jpg", "homePageImage.png", "restaurant.jpg"];
+    $scope.mainImage = $scope.imageUrl[0];
+
+    $scope.number = 3;
+    $scope.getNumber = function () {
+      var num = $scope.imageUrl.length;
+      if (num > 5) {
+        num = 5;
+      }
+      return new Array(num - 1);
+    };
   };
 
   angular.module('restaurantBookingApp').component('restaurantOverview', {

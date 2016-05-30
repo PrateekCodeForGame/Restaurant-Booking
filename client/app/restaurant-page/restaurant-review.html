@@ -1,1 +1,93 @@
-<div>This is the restaurant-review view.</div>
+<div class="component-background main-image">
+  <div class="review-heading"><b> Sammanfattning</b></div>
+  <div class="row main-image remove-padding">
+    <div class="col-md-1 rating-show">
+      {{rating}}
+    </div>
+    <div class="col-md-2 top-padding">
+      <rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="restaurant-rating"></rate-yo>
+    </div>
+    <div class="col-md-4 restaurant-review top-padding summary-text">
+      <p><b>Baserat pa {{peopleRated}} revyer</b></p>
+    </div>
+  </div>
+  <div class="row main-image summary-text remove-padding">
+    <div class="col-md-1">
+      <p><b>Kvalitet</b></p>
+    </div>
+    <div class="col-md-3">
+      <rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rate-float restaurant-rating"></rate-yo>
+    </div>
+    <div class="col-md-1">
+      <p><b>Service</b></p>
+    </div>
+    <div class="col-md-3">
+      <rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rate-float restaurant-rating"></rate-yo>
+    </div>
+    <div class="col-md-1">
+      <p><b>Prisvart</b></p>
+    </div>
+    <div class="col-md-3">
+      <rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rate-float restaurant-rating"></rate-yo>
+    </div>
+  </div>
+</div>
+<div class="component-background main-image">
+  <div class="row main-image summary-text">
+    <div class="col-md-3 remove-space review-heading">Sortera efter</div>
+    <div class="col-md-2">
+      <select class="sort-bar" ng-options="sort for sort in sortType" ng-model="selectedSort">
+        <option value="" disabled selected style="display: none;">Select</option>
+      </select>
+    </div>
+  </div>
+  <div class="row review-padding" ng-repeat="i in reviews track by $index">
+    <div class="row reviewer">
+      <div class="col-md-1">
+        <span><i class="fa fa-file-text-o"></i></span>
+      </div>
+      <div class="col-md-4">
+        <p>
+          {{name}}
+        </p>
+      </div>
+      <div class="col-md-4">
+        <p>
+          {{time}}
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1 rating-show">
+        {{rating}}
+      </div>
+      <div class="col-md-11">
+        <div class="row star-color">
+          <div class="col-md-4">
+            <p><b>Kvalitet</b></p>
+          </div>
+          <div class="col-md-4">
+            <p><b>Service</b></p>
+          </div>
+          <div class="col-md-4">
+            <p><b>Prisvart</b></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <rate-yo ng-model="kvalitetRating" read-only="options.readOnly" options="options" class="restaurant-rating"></rate-yo>
+          </div>
+          <div class="col-md-4">
+            <rate-yo ng-model="serviceRating" read-only="options.readOnly" options="options" class="restaurant-rating"></rate-yo>
+          </div>
+          <div class="col-md-4">
+            <rate-yo ng-model="prisvartRating" read-only="options.readOnly" options="options" class="restaurant-rating"></rate-yo>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row star-color review-padding-top">
+      <p><b>{{review}}</b></p>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,4 @@
 server/config/local.env.js
 node_modules/
 dist/
+.tmp/

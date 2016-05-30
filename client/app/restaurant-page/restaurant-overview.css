@@ -1,0 +1,24 @@
+.main-image {
+  padding: 20px;
+}
+.other-image {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.lines {
+  border: 1px solid;
+  color: #EAEEF2;
+}
+.facilities {
+  color: #8196AE;
+  font-weight: bold;
+}
+.facilities-padding {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.summary-text {
+  padding: 20px;
+  color: #8196AE;
+  font-family: sans-serif;
+}

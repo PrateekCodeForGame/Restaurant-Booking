@@ -5,17 +5,8 @@
       <p class="lead">BOKA BORD, BESTÄLL MAT FÖR AVHÄMTNING ELLER HEMKÖRNING. VILKET ALTERNATIV DU ÄN VÄLJER BLIR DET INTE ENKLARE ÄN SÅ HÄR!</p>
       <div class="row lead-text">
         <div class="col-md-2 navbar-text-style"></div>
-        <div class="col-md-2">
-          <input class="navbar-textbox-style" type="text" ng-model="searchKeyword" placeholder="Sökord"></input>
-        </div>
-        <div class="col-md-2"><i class="glyphicon glyphicon-map-marker icon-space"></i>
-          <input class="navbar-textbox-style " type="text" ng-model="searchKeyword" placeholder="Position">
-        </div>
-        <div class="col-md-2">
-          <select class="navbar-dropdown-style" ui-select2 multiple ng-model="selectedTags" placeholder="All Categories">
-            <option value=""></option>
-            <option ng-repeat="number in countries" value="{{number}}">{{number}}</option>
-          </select>
+        <div class="col-md-6"><i class="glyphicon glyphicon-map-marker icon-space"></i>
+          <input class="navbar-textbox-style search-bar" type="text" ng-model="searchKeyword" placeholder="Enter Location or Restaurant Name">
         </div>
         <div class="col-md-2">
           <button class="navbar-button-style">Sök restaurang</button>
@@ -31,22 +22,33 @@
         <br />
         <p class="info-header-style">Restauranger nära dig</p>
         <br />
-        <p class="info-text-style">Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p>
+        <!-- <p class="info-text-style">Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p> -->
       </div>
       <div class="col-md-3 info-text grow">
         <span><i class="glyphicon glyphicon-credit-card icon-style"></i></span>
         <br />
         <p class="info-header-style">Unika erbjudanden</p>
         <br />
-        <p class="info-text-style">Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p>
+        <!-- <p class="info-text-style">Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p> -->
       </div>
       <div class="col-md-3 info-text grow">
         <span><i class="glyphicon glyphicon-list-alt icon-style"></i></span>
         <br />
         <p class="info-header-style">Restauranger nära dig</p>
         <br />
-        <p class="info-text-style">Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p>
+        <!-- <p class="info-text-style">Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p> -->
       </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3" ng-repeat="image in cityImages">
+          <img src="assets/images/{{image}}" width="100%" height="180px">
+        </a>
+      </div>
+    </div>
+    <div class="row space">
+      <h3 class="restaurant-list-heading">Fler Stader</h3>
     </div>
   </div>
   <div class="container">
@@ -56,9 +58,9 @@
     <div class="row">
       <h3 class="restaurant-list-heading">Några av våra favoriter</h3>
     </div>
-    <div class="row">
+    <div class="row space">
       <div class="col-md-3 grow">
-        <a ui-sref="restaurant-page">
+        <a ui-sref="restaurant-page.restaurant-overview">
           <img src="{{imageUrl}}" width="100%" height="180px">
           <div class="restaurant-name">
             <div class="row">
@@ -69,9 +71,9 @@
                 <p>({{usersRated}})</p>
               </div>
             </div>
-            <h5 class="rating-style">Smiths of smithfield, Dining Room</h5>
+            <a ui-sref="restaurant-page.restaurant-overview" style="text-decoration: none; color: black;"><h5 class="rating-style">Smiths of smithfield, Dining Room</h5></a>
           </div>
-          <div class="star-deal-background">
+          <!-- <div class="star-deal-background">
             <div class="row">
               <div class="col-md-5 star-deal-logo"><span class="star-logo"><i class="fa fa-star"></i></span>Star Deals</div>
               <div class="col-md-4 star-deal-amount">
@@ -84,92 +86,98 @@
                 <h5 class="star-deal-course">{{starDeal}}</h5>
               </div>
             </div>
-          </div>
+          </div> -->
         </a>
       </div>
       <div class="col-md-3 grow">
-        <img src="{{imageUrl}}" width="100%" height="180px">
-        <div class="restaurant-name">
-          <div class="row">
-            <div class="col-md-6">
-              <rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo>
+        <a ui-sref="restaurant-page.restaurant-overview">
+          <img src="{{imageUrl}}" width="100%" height="180px">
+          <div class="restaurant-name">
+            <div class="row">
+              <div class="col-md-6">
+                <rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo>
+              </div>
+              <div class="col-md-6 user-rated">
+                <p>({{usersRated}})</p>
+              </div>
             </div>
-            <div class="col-md-6 user-rated">
-              <p>({{usersRated}})</p>
-            </div>
+            <a ui-sref="restaurant-page.restaurant-overview" style="text-decoration: none; color: black;"><h5 class="rating-style">Smiths of smithfield, Dining Room</h5></a>
           </div>
-          <h5 class="rating-style">Smiths of smithfield, Dining Room</h5>
-        </div>
-        <div class="star-deal-background">
-          <div class="row">
-            <div class="col-md-5 star-deal-logo"><span class="star-logo"><i class="fa fa-star"></i></span>Star Deals</div>
-            <div class="col-md-4 star-deal-amount">
-              <p class="star-deal-amount-float">£{{starDealPrice}}
-                <p>
+          <!-- <div class="star-deal-background">
+            <div class="row">
+              <div class="col-md-5 star-deal-logo"><span class="star-logo"><i class="fa fa-star"></i></span>Star Deals</div>
+              <div class="col-md-4 star-deal-amount">
+                <p class="star-deal-amount-float">£{{starDealPrice}}
+                  <p>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <h5 class="star-deal-course">{{starDeal}}</h5>
+            <div class="row">
+              <div class="col-md-12">
+                <h5 class="star-deal-course">{{starDeal}}</h5>
+              </div>
             </div>
-          </div>
-        </div>
+          </div> -->
+        </a>
       </div>
       <div class="col-md-3 grow">
-        <img src="{{imageUrl}}" width="100%" height="180px">
-        <div class="restaurant-name">
-          <div class="row">
-            <div class="col-md-6">
-              <rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo>
+        <a ui-sref="restaurant-page.restaurant-overview">
+          <img src="{{imageUrl}}" width="100%" height="180px">
+          <div class="restaurant-name">
+            <div class="row">
+              <div class="col-md-6">
+                <rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo>
+              </div>
+              <div class="col-md-6 user-rated">
+                <p>({{usersRated}})</p>
+              </div>
             </div>
-            <div class="col-md-6 user-rated">
-              <p>({{usersRated}})</p>
-            </div>
+            <a ui-sref="restaurant-page.restaurant-overview" style="text-decoration: none; color: black;"><h5 class="rating-style">Smiths of smithfield, Dining Room</h5></a>
           </div>
-          <h5 class="rating-style">Smiths of smithfield, Dining Room</h5>
-        </div>
-        <div class="star-deal-background">
-          <div class="row">
-            <div class="col-md-5 star-deal-logo"><span class="star-logo"><i class="fa fa-star"></i></span>Star Deals</div>
-            <div class="col-md-4 star-deal-amount">
-              <p class="star-deal-amount-float">£{{starDealPrice}}
-                <p>
+          <!-- <div class="star-deal-background">
+            <div class="row">
+              <div class="col-md-5 star-deal-logo"><span class="star-logo"><i class="fa fa-star"></i></span>Star Deals</div>
+              <div class="col-md-4 star-deal-amount">
+                <p class="star-deal-amount-float">£{{starDealPrice}}
+                  <p>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <h5 class="star-deal-course">{{starDeal}}</h5>
+            <div class="row">
+              <div class="col-md-12">
+                <h5 class="star-deal-course">{{starDeal}}</h5>
+              </div>
             </div>
-          </div>
-        </div>
+          </div> -->
+        </a>
       </div>
       <div class="col-md-3 grow">
-        <img src="{{imageUrl}}" width="100%" height="180px">
-        <div class="restaurant-name">
-          <div class="row">
-            <div class="col-md-6">
-              <rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo>
+        <a ui-sref="restaurant-page.restaurant-overview">
+          <img src="{{imageUrl}}" width="100%" height="180px">
+          <div class="restaurant-name">
+            <div class="row">
+              <div class="col-md-6">
+                <rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="rating-style"></rate-yo>
+              </div>
+              <div class="col-md-6 user-rated">
+                <p>({{usersRated}})</p>
+              </div>
             </div>
-            <div class="col-md-6 user-rated">
-              <p>({{usersRated}})</p>
-            </div>
+            <a ui-sref="restaurant-page.restaurant-overview" style="text-decoration: none; color: black;"><h5 class="rating-style">Smiths of smithfield, Dining Room</h5></a>
           </div>
-          <h5 class="rating-style">Smiths of smithfield, Dining Room</h5>
-        </div>
-        <div class="star-deal-background">
-          <div class="row">
-            <div class="col-md-5 star-deal-logo"><span class="star-logo"><i class="fa fa-star"></i></span>Star Deals</div>
-            <div class="col-md-4 star-deal-amount">
-              <p class="star-deal-amount-float">£{{starDealPrice}}
-                <p>
+          <!-- <div class="star-deal-background">
+            <div class="row">
+              <div class="col-md-5 star-deal-logo"><span class="star-logo"><i class="fa fa-star"></i></span>Star Deals</div>
+              <div class="col-md-4 star-deal-amount">
+                <p class="star-deal-amount-float">£{{starDealPrice}}
+                  <p>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <h5 class="star-deal-course">{{starDeal}}</h5>
+            <div class="row">
+              <div class="col-md-12">
+                <h5 class="star-deal-course">{{starDeal}}</h5>
+              </div>
             </div>
-          </div>
-        </div>
+          </div> -->
+        </a>
       </div>
     </div>
   </div>
