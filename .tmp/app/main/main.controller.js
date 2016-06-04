@@ -27,7 +27,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     $scope.imageUrl = "assets/images/restaurant.jpg";
     $scope.starDealPrice = 22;
     $scope.starDeal = "Steak, fries & a glass of Rioja for £22 per person";
-    $scope.cityImages = ["City1.jpg", "City2.jpg", "City3.jpg", "City4.jpg"];
+    $scope.cityImages = ["stockholm.jpg", "goteborg.jpg", "malmo.jpg", "lulea.jpg"];
 
     $scope.countries = ["Afghanistan", "Pakistan", "India", "fghanistan", "Pakstan", "Idia", "Afghanitan", "Pastan", "dia"];
   };
