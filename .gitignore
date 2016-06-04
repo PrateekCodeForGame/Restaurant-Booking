@@ -1,4 +1,8 @@
-server/config/local.env.js
-node_modules/
-dist/
-.tmp/
+node_modules
+public
+.tmp
+.idea
+dist
+/server/config/local.env.js
+npm-debug.log
+coverage
