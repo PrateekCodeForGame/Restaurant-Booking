@@ -24,12 +24,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     $scope.rating = 4.5;
     $scope.usersRated = 60;
+
+    $scope.mainRestaurants = [1, 2, 3, 4];
     $scope.imageUrl = "assets/images/restaurant.jpg";
     $scope.starDealPrice = 22;
     $scope.starDeal = "Steak, fries & a glass of Rioja for £22 per person";
     $scope.cityImages = ["stockholm.jpg", "goteborg.jpg", "malmo.jpg", "lulea.jpg"];
 
     $scope.countries = ["Afghanistan", "Pakistan", "India", "fghanistan", "Pakstan", "Idia", "Afghanitan", "Pastan", "dia"];
+
+    $scope.showView = "hidden";
+    $scope.dimDisplay = "";
   };
 
   angular.module('restaurantBookingApp').component('main', {

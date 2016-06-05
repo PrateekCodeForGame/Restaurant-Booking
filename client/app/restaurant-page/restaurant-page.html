@@ -32,11 +32,11 @@
   <div class="container top-space">
     <div class="row">
       <div class="col-md-7">
-        <ul class="nav nav-tabs nav-background">
-          <li><a ui-sref=".restaurant-overview" class="active">Overslkt</a></li>
-          <li><a ui-sref=".restaurant-menu">Meny</a></li>
-          <li><a ui-sref=".restaurant-review">Recensioner</a></li>
-          <li><a ui-sref=".restaurant-offers">Erbjudanden</a></li>
+        <ul class="nav nav-tabs nav-background tab-width">
+          <li><a ui-sref=".restaurant-overview" class="nav-headers" ng-click="selectedTab('Overview')" ng-class="tabs.Overview"><i class="fa fa-cutlery tab-icons"></i> Overslkt</a></li>
+          <li><a ui-sref=".restaurant-menu" class="nav-headers" ng-click="selectedTab('Menu')" ng-class="tabs.Menu"><i class="fa fa-file-text-o tab-icons"></i> Meny</a></li>
+          <li><a ui-sref=".restaurant-review" class="nav-headers" ng-click="selectedTab('Reviews')" ng-class="tabs.Reviews"><i class="fa fa-star tab-icons"></i> Recensioner</a></li>
+          <li><a ui-sref=".restaurant-offers" class="nav-headers" ng-click="selectedTab('Offers')" ng-class="tabs.Offers"><i class="fa fa-tag tab-icons"></i> Erbjudanden</a></li>
         </ul>
         <div ui-view=""></div>
       </div>

@@ -89,3 +89,25 @@
 .nav-background {
   background-color: white;
 }
+.nav-headers {
+  background-color: #2D333F;
+  color: white;
+  border: 1px solid white;
+}
+.nav-headers: hover {
+  background-color: white;
+}
+.selectedTabs {
+  background-color: white;
+  color: #2D333F;
+  border: 2px solid #2D333F;
+}
+.tab-icons {
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid;
+  border-radius: 200px;
+}
+.tab-width {
+  width: 545px;
+}

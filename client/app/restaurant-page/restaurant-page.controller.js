@@ -15,6 +15,12 @@
         '-webkit-filter': "brightness(0.4)",
       };
 
+      $scope.tabs = {'Overview': "", 'Menu': "", 'Reviews': "", 'Offers': ""};
+      $scope.selectedTab = function(selected) {
+        $scope.tabs = {'Overview': "", 'Menu': "", 'Reviews': "", 'Offers': ""};
+        $scope.tabs[selected] = "selectedTabs";
+      }
+
       $scope.options = {
         ratedFill: '#FBD033',
         readOnly: true,
