@@ -2,19 +2,50 @@
 
 (function() {
 
-class AdminController {
-  constructor(User) {
-    // Use the User $resource to fetch all users
-    this.users = User.query();
+  class AdminController {
+    constructor(User, Auth, $scope, $http) {
+      // Use the User $resource to fetch all users
+      this.users = User.query();
+      this.getCurrentUser = Auth.getCurrentUser;
+      $scope.restaurantPresent = this.getCurrentUser().restaurantId;
+      $scope.userId = this.getCurrentUser()._id;
+      console.log("...............................................", this.getCurrentUser());
+      $scope.restaurant = {};
+      $http({
+        url: "/api/restaurants",
+        method: "GET",
+      }).then(function(response) {
+        //  console.log("...............................................", response);
+      });
+
+
+      $scope.restaurantAdded = function() {
+        if ($scope.restaurantPresent == '0') {
+          return true;
+        };
+        return false;
+      };
+      $scope.addNew = function() {
+        $scope.restaurantPresent = 1;
+      };
+      $scope.saveRestaurant = function() {
+         $http({
+           url: "/api/restaurants",
+           method: "POST",
+           data: $scope.restaurant
+         }).then(function(response) {
+           console.log("...............................................", response);
+         });
+      };
+    }
+
+    delete(user) {
+      user.$remove();
+      this.users.splice(this.users.indexOf(user), 1);
+    }
   }
 
-  delete(user) {
-    user.$remove();
-    this.users.splice(this.users.indexOf(user), 1);
-  }
-}
-
-angular.module('restaurantBookingApp.admin')
-  .controller('AdminController', AdminController);
+  angular.module('restaurantBookingApp.admin')
+    .controller('AdminController', AdminController);
 
 })();

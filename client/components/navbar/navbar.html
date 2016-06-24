@@ -11,13 +11,10 @@
         <a href="/" class="navbar-brand navbar-text-color">Restaurangbokning</a>
       </div>
       <div id="navbar-main">
-        <!-- <ul class="nav navbar-nav">
-          <li ng-repeat="item in nav.menu" ui-sref-active="active">
-            <a ui-sref="{{item.state}}">{{item.title}}</a>
-          </li>
-          <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="admin">Admin</a></li>
+        <ul class="nav navbar-nav">
+          <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="admin" class="navbar-text-color">Restaurant</a></li>
         </ul>
-        -->
+
         <ul class="nav navbar-nav navbar-right">
           <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a class="navbar-text-color" ui-sref="signup">Sign up</a></li>
           <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a class="navbar-text-color" ui-sref="login">Login</a></li>

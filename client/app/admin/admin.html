@@ -1,5 +1,5 @@
 <div class="container">
-  <p>The delete user and user index api routes are restricted to users with the 'admin' role.</p>
+  <!-- <p>The delete user and user index api routes are restricted to users with the 'admin' role.</p>
   <ul class="list-group user-list">
     <li class="list-group-item" ng-repeat="user in admin.users">
 	    <div class="user-info">
@@ -8,5 +8,91 @@
 	    </div>
         <a ng-click="admin.delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
     </li>
-  </ul>
+  </ul> -->
+  <div ng-if="restaurantAdded()" class="">
+    <button ng-click="addNew()">Add new restaurant</button>
+  </div>
+  <div ng-if="!restaurantAdded()" class="">
+    <div class="form-group">
+      <label>Restaurant Name</label>
+
+      <input type="text" class="form-control" ng-model="restaurant.restaurantName" required>
+    </div>
+    <div class="form-group">
+      <label>Address Line 1</label>
+
+      <input type="text" class="form-control" ng-model="restaurant.addressLine1" required>
+    </div>
+    <div class="form-group">
+      <label>Address Line 2</label>
+
+      <input type="text" class="form-control" ng-model="restaurant.addressLine2" required>
+    </div>
+    <div class="form-group">
+      <label>Address Line 3</label>
+
+      <input type="text" class="form-control" ng-model="restaurant.addressLine3" required>
+    </div>
+    <div class="form-group">
+      <label>Phone Number</label>
+
+      <input type="text" class="form-control" ng-model="restaurant.phone" required>
+    </div>
+    <div class="form-group">
+      <label>Website</label>
+
+      <input type="text" name="email" class="form-control" ng-model="restaurant.website" required>
+    </div>
+    <div class="form-group">
+      <label>Table Booking</label>
+
+      <input type="email" name="email" class="form-control" ng-model="restaurant.tableBooking" required>
+    </div>
+    <div class="form-group">
+      <label>Header Image</label>
+
+      <input type="text" name="email" class="form-control" ng-model="vm.user.email" required>
+    </div>
+    <div class="form-group">
+      <label>Iages</label>
+
+      <input type="text" class="form-control" ng-model="vm.user.email" required>
+    </div>
+    <div class="form-group">
+      <label>Amenities</label>
+
+      <input type="text" class="form-control" ng-model="vm.user.email" required>
+    </div>
+    <div class="form-group">
+      <label>Summary</label>
+
+      <input type="text" class="form-control" ng-model="restaurant.summary" required>
+    </div>
+    <div class="form-group">
+      <label>Social Media</label>
+
+      <input type="text" class="form-control" ng-model="restaurant.socialMedia" required>
+    </div>
+    <div class="form-group">
+      <label>Open Timings</label>
+
+      <input type="text" class="form-control" ng-model="restaurant.openTimings" required>
+    </div>
+    <div class="form-group">
+      <label>Menu Images</label>
+
+      <input type="text" class="form-control" ng-model="vm.user.email" required>
+    </div>
+    <div class="form-group">
+      <label>Offer Images</label>
+
+      <input type="text" class="form-control" ng-model="vm.user.email" required>
+    </div>
+    <div class="form-group">
+      <label>Location</label>
+
+      <input type="text" class="form-control" ng-model="restaurant.loation" required>
+    </div>
+    <button ng-click="saveRestaurant()">Save new restaurant</button>
+  </div>
 </div>

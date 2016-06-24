@@ -64,6 +64,14 @@
           </p>
         </div>
 
+        <div class="form-group">
+          <label>Select Role</label>
+          <select class="form-control" ng-model="vm.user.role">
+            <option value="user">Customer</option>
+            <option value="admin">Restaurant</option>
+          </select>
+        </div>
+
         <div>
           <button class="btn btn-inverse btn-lg btn-register" type="submit">
             Sign up

@@ -17,6 +17,7 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/restaurant/restaurant.socket').register(socket);
 
 }
 
