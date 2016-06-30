@@ -9,10 +9,8 @@
         <a ng-click="admin.delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
     </li>
   </ul> -->
-  <div ng-if="restaurantAdded()" class="">
-    <button ng-click="addNew()">Add new restaurant</button>
-  </div>
-  <div ng-if="!restaurantAdded()" class="">
+  <div>
+    <label>{{restaurantDetails}}</label>
     <div class="form-group">
       <label>Restaurant Name</label>
 
@@ -41,20 +39,20 @@
     <div class="form-group">
       <label>Website</label>
 
-      <input type="text" name="email" class="form-control" ng-model="restaurant.website" required>
+      <input type="text" class="form-control" ng-model="restaurant.website" required>
     </div>
     <div class="form-group">
       <label>Table Booking</label>
 
-      <input type="email" name="email" class="form-control" ng-model="restaurant.tableBooking" required>
+      <input type="text" class="form-control" ng-model="restaurant.tableBooking" required>
     </div>
     <div class="form-group">
       <label>Header Image</label>
 
-      <input type="text" name="email" class="form-control" ng-model="vm.user.email" required>
+      <input type="text" class="form-control" ng-model="vm.user.email" required>
     </div>
     <div class="form-group">
-      <label>Iages</label>
+      <label>Images</label>
 
       <input type="text" class="form-control" ng-model="vm.user.email" required>
     </div>
@@ -91,8 +89,8 @@
     <div class="form-group">
       <label>Location</label>
 
-      <input type="text" class="form-control" ng-model="restaurant.loation" required>
+      <input type="text" class="form-control" ng-model="restaurant.location" required>
     </div>
-    <button ng-click="saveRestaurant()">Save new restaurant</button>
+    <button ng-click="saveRestaurant()">{{restaurantDetails}}</button>
   </div>
 </div>

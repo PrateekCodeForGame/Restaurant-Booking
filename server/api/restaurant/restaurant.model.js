@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 
 var RestaurantSchema = new mongoose.Schema({
   restaurantName: String,
+  owner: String,
   addressLine1: String,
   addressLine2: String,
   addressLine3: String,

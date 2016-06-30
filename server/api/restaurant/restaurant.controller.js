@@ -74,6 +74,14 @@ export function show(req, res) {
     .catch(handleError(res));
 }
 
+// Gets a single Restaurant by owner
+export function showOwnerWise(req, res) {
+  return Restaurant.findOne({owner: req.params.owner}).exec()
+    .then(handleEntityNotFound(res))
+    .then(respondWithResult(res))
+    .catch(handleError(res));
+}
+
 // Creates a new Restaurant in the DB
 export function create(req, res) {
   return Restaurant.create(req.body)

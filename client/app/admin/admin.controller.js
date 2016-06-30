@@ -7,17 +7,16 @@
       // Use the User $resource to fetch all users
       this.users = User.query();
       this.getCurrentUser = Auth.getCurrentUser;
-      $scope.restaurantPresent = this.getCurrentUser().restaurantId;
-      $scope.userId = this.getCurrentUser()._id;
-      console.log("...............................................", this.getCurrentUser());
+      $scope.owner = this.getCurrentUser().email;
       $scope.restaurant = {};
+      $scope.restaurantDetails = "Add new Restaurant";
       $http({
-        url: "/api/restaurants",
+        url: "/api/restaurants/owner/" + $scope.owner,
         method: "GET",
       }).then(function(response) {
-        //  console.log("...............................................", response);
+        $scope.restaurant = response.data;
+        $scope.restaurantDetails = "Update Restaurant";
       });
-
 
       $scope.restaurantAdded = function() {
         if ($scope.restaurantPresent == '0') {
@@ -29,13 +28,14 @@
         $scope.restaurantPresent = 1;
       };
       $scope.saveRestaurant = function() {
-         $http({
-           url: "/api/restaurants",
-           method: "POST",
-           data: $scope.restaurant
-         }).then(function(response) {
-           console.log("...............................................", response);
-         });
+        $scope.restaurant["owner"] = $scope.owner
+        $http({
+          url: "/api/restaurants",
+          method: "POST",
+          data: $scope.restaurant
+        }).then(function(response) {
+          console.log("...............................................", response);
+        });
       };
     }
 

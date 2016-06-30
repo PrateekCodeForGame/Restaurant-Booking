@@ -34,10 +34,6 @@ var UserSchema = new Schema({
       }
     }
   },
-  restaurantId: {
-    type: String,
-    default: "0"
-  },
   provider: String,
   salt: String,
   facebook: {},

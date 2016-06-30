@@ -116,20 +116,6 @@ export function destroy(req, res) {
 }
 
 /**
- * Updates a user
- */
-export function update(req, res) {
-  if (req.body._id) {
-    delete req.body._id;
-  }
-  return Restaurant.findById(req.params.id).exec()
-    .then(handleEntityNotFound(res))
-    .then(saveUpdates(req.body))
-    .then(respondWithResult(res))
-    .catch(handleError(res));
-}
-
-/**
  * Change a users password
  */
 export function changePassword(req, res, next) {
