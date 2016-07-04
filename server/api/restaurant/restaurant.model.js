@@ -12,14 +12,14 @@ var RestaurantSchema = new mongoose.Schema({
   website: String,
   tableBooking: Boolean,
   headerImage: String,
-  images: String,
-  amenities: String,
+  images: [String],
+  // amenities: String,
   summary: String,
   socialMedia: String,
   openTimings: String,
-  menuImages: String,
-  offerImages: String,
-  location: String
+  menuImages: [String],
+  offerImages: [String],
+  location: [String]
 });
 
 export default mongoose.model('Restaurant', RestaurantSchema);

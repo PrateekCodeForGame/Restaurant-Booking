@@ -3,7 +3,7 @@
 (function() {
 
   class AdminController {
-    constructor(User, Auth, $scope, $http) {
+    constructor(User, Auth, $scope, $http, Upload) {
       // Use the User $resource to fetch all users
       this.users = User.query();
       this.getCurrentUser = Auth.getCurrentUser;
@@ -34,7 +34,36 @@
           method: "POST",
           data: $scope.restaurant
         }).then(function(response) {
-          console.log("...............................................", response);
+          // console.log("...............................................", response);
+        });
+      };
+
+      // Image upload
+
+      var uploadUrl = '/api/upload';
+      var images;
+
+      $scope.uploadFiles = function(files, errFiles) {
+        images = files;
+        $scope.startUpload();
+        console.log("..............", images);
+      };
+
+      $scope.startUpload = function() {
+        var filenames = [];
+        var data = {
+          title: 'test title',
+          images: images
+        };
+
+        Upload.upload({
+          url: uploadUrl,
+          arrayKey: '',
+          data: data,
+        }).then(function(response){
+          angular.forEach(response.data.success, function(value){
+            filenames.push(value.filename);
+          });
         });
       };
     }

@@ -14,7 +14,8 @@ angular.module('restaurantBookingApp', [
   'rateYo',
   'ui.select2',
   'ngMap',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ngFileUpload'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

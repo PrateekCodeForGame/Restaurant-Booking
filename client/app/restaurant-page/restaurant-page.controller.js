@@ -3,11 +3,9 @@
 
   class RestaurantPageComponent {
     constructor($scope) {
-      $scope.message = 'Hello';
-
       $scope.restaurantName = "Oliver & Bonacini Cafe Grill";
 
-      $scope.coordinates = [43.461892, -79.686994];
+      $scope.coordinates = ["43.461892", "-79.686994"];
 
       $scope.imageUrl = 'assets/images/restaurant-overview.jpg';
       $scope.imagetest = {
