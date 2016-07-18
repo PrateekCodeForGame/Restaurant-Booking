@@ -35,7 +35,7 @@ require('./routes').default(app);
 var multer = require('multer');
 var storage = multer.diskStorage({
   destination: function(req, file, cb) {
-    cb(null, './assets/img/');
+    cb(null, './client/assets/images/');
   },
   filename: function(req, file, cb) {
     console.log(".........sadsa.", file);

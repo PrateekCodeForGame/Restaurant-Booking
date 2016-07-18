@@ -2,8 +2,8 @@
 (function() {
 
   class RestaurantOverviewComponent {
-    constructor($scope) {
-      $scope.imageUrl = ["restaurant.jpg", "restaurant-overview.jpg", "restaurant.jpg", "homePageImage.png", "restaurant.jpg"];
+    constructor($scope, Restaurant) {
+      $scope.imageUrl = Restaurant.selectedRestaurant.images;
       $scope.mainImage = $scope.imageUrl[0];
 
       $scope.number = 3;

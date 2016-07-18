@@ -10,32 +10,46 @@
       $scope.owner = this.getCurrentUser().email;
       $scope.restaurant = {};
       $scope.restaurantDetails = "Add new Restaurant";
+      $scope.latitude = "";
+      $scope.longitude = "";
       $http({
         url: "/api/restaurants/owner/" + $scope.owner,
         method: "GET",
       }).then(function(response) {
         $scope.restaurant = response.data;
+        $scope.latitude = response.data.location[0];
+        $scope.longitude = response.data.location[1];
         $scope.restaurantDetails = "Update Restaurant";
       });
 
-      $scope.restaurantAdded = function() {
-        if ($scope.restaurantPresent == '0') {
-          return true;
-        };
-        return false;
-      };
-      $scope.addNew = function() {
-        $scope.restaurantPresent = 1;
-      };
       $scope.saveRestaurant = function() {
-        $scope.restaurant["owner"] = $scope.owner
-        $http({
-          url: "/api/restaurants",
-          method: "POST",
-          data: $scope.restaurant
-        }).then(function(response) {
-          // console.log("...............................................", response);
-        });
+        $scope.restaurant["owner"] = $scope.owner;
+        $scope.restaurant["location"] = [];
+        $scope.restaurant["location"].push($scope.latitude);
+        $scope.restaurant["location"].push($scope.longitude);
+        console.log("....................", $scope.restaurant);
+        if($scope.restaurantDetails == "Add new Restaurant") {
+          $http({
+            url: "/api/restaurants",
+            method: "POST",
+            data: $scope.restaurant
+          }).then(function(response) {
+          });
+        }
+        else {
+          $http({
+            url: "/api/restaurants/" + $scope.restaurant._id,
+            method: "DELETE",
+            data: $scope.restaurant
+          }).then(function(response) {
+            $http({
+              url: "/api/restaurants",
+              method: "POST",
+              data: $scope.restaurant
+            }).then(function(response) {
+            });
+          });
+        }
       };
 
       // Image upload
@@ -43,29 +57,63 @@
       var uploadUrl = '/api/upload';
       var images;
 
-      $scope.uploadFiles = function(files, errFiles) {
+      $scope.uploadHeaderFiles = function(files, errFiles) {
         images = files;
-        $scope.startUpload();
-        console.log("..............", images);
-      };
-
-      $scope.startUpload = function() {
-        var filenames = [];
         var data = {
           title: 'test title',
           images: images
         };
-
         Upload.upload({
           url: uploadUrl,
           arrayKey: '',
           data: data,
-        }).then(function(response){
-          angular.forEach(response.data.success, function(value){
-            filenames.push(value.filename);
+        }).then(function(response) {
+          angular.forEach(response.data.success, function(value) {
+            $scope.restaurant["headerImage"] = (value.filename);
           });
         });
       };
+
+      $scope.uploadImageFiles = function(files, errFiles) {
+        images = files;
+        var data = {
+          title: 'test title',
+          images: images
+        };
+        Upload.upload({
+          url: uploadUrl,
+          arrayKey: '',
+          data: data,
+        }).then(function(response) {
+          angular.forEach(response.data.success, function(value) {
+            if(!$scope.restaurant["images"]) {
+              $scope.restaurant["images"] = [];
+            }
+            $scope.restaurant["images"].push(value.filename);
+          });
+        });
+      };
+
+      $scope.uploadOfferFiles = function(files, errFiles) {
+        images = files;
+        var data = {
+          title: 'test title',
+          images: images
+        };
+        Upload.upload({
+          url: uploadUrl,
+          arrayKey: '',
+          data: data,
+        }).then(function(response) {
+          angular.forEach(response.data.success, function(value) {
+            if(!$scope.restaurant["offerImages"]) {
+              $scope.restaurant["offerImages"] = [];
+            }
+            $scope.restaurant["offerImages"].push(value.filename);
+          });
+        });
+      };
+
     }
 
     delete(user) {

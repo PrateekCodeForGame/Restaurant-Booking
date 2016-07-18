@@ -59,7 +59,7 @@
     </div>
     <div class="row space">
       <div ng-repeat="res in mainRestaurants" class="col-md-3" ng-mouseover="showView = 'view-page'; dimDisplay = 'show-page'" ng-mouseleave="showView = 'hidden'; dimDisplay = ''">
-        <a ui-sref="restaurant-page.restaurant-overview" ng-class="dimDisplay">
+        <a ui-sref="restaurant-page({restaurantId: res._id})" ng-class="dimDisplay">
           <img src="{{imageUrl}}" width="100%" height="180px">
           <div class="restaurant-name" ng-class="dimDisplay">
             <div class="row">

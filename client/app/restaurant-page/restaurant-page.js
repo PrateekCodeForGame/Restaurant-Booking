@@ -4,7 +4,7 @@ angular.module('restaurantBookingApp')
   .config(function($stateProvider) {
     $stateProvider
       .state('restaurant-page', {
-        url: '/restaurant-page',
+        url: '/restaurant-page/:restaurantId',
         template: '<restaurant-page></restaurant-page>'
       })
 

@@ -27,9 +27,9 @@
       <input type="text" class="form-control" ng-model="restaurant.addressLine2" required>
     </div>
     <div class="form-group">
-      <label>Address Line 3</label>
+      <label>City</label>
 
-      <input type="text" class="form-control" ng-model="restaurant.addressLine3" required>
+      <input type="text" class="form-control" ng-model="restaurant.city" required>
     </div>
     <div class="form-group">
       <label>Phone Number</label>
@@ -49,12 +49,12 @@
     <div class="form-group">
       <label>Header Image</label>
 
-      <input type="text" class="form-control" ng-model="vm.user.email" required>
+      <input id="images" class="form-control" type="file" name="images" placeholder="Upload the image to be shown as header" accept="image/*" ngf-select="uploadHeaderFiles($files, $invalidFiles)"  ngf-multiple="false"/>
     </div>
     <div class="form-group">
       <label>Images</label>
 
-      <input id="images" class="form-control" type="file" name="images" placeholder="Images" accept="image/*" ngf-select="uploadFiles($files, $invalidFiles)"  ngf-multiple="true"/>
+      <input id="images" class="form-control" type="file" name="images" placeholder="Upload the images to be shown in restaurant  page" accept="image/*" ngf-select="uploadImageFiles($files, $invalidFiles)"  ngf-multiple="true"/>
     </div>
     <!-- <div class="form-group">
       <label>Amenities</label>
@@ -66,30 +66,35 @@
 
       <input type="text" class="form-control" ng-model="restaurant.summary" required>
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label>Social Media</label>
 
       <input type="text" class="form-control" ng-model="restaurant.socialMedia" required>
-    </div>
+    </div> -->
     <div class="form-group">
       <label>Open Timings</label>
 
-      <input type="text" class="form-control" ng-model="restaurant.openTimings" required>
+      <input type="text" class="form-control" ng-model="restaurant.openTimings" placeholder="hh:mm am/pm - hh:mm am/pm" required>
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label>Menu Images</label>
 
-      <input type="text" class="form-control" ng-model="vm.user.email" required>
-    </div>
+      <input id="images" class="form-control" type="file" name="images" placeholder="Upload the images to be shown in menu page" accept="image/*" ngf-select="uploadMenuFiles($files, $invalidFiles)"  ngf-multiple="true"/>
+    </div> -->
     <div class="form-group">
       <label>Offer Images</label>
 
-      <input type="text" class="form-control" ng-model="vm.user.email" required>
+      <input id="images" class="form-control" type="file" name="images" placeholder="Upload the images to be shown in offer page" accept="image/*" ngf-select="uploadOfferFiles($files, $invalidFiles)"  ngf-multiple="true"/>
     </div>
     <div class="form-group">
       <label>Location</label>
 
-      <input type="text" class="form-control" ng-model="restaurant.location" required>
+      <label>Lattitude</label>
+
+      <input type="text" class="form-control" ng-model="latitude" required>
+      <label>Longitude</label>
+
+      <input type="text" class="form-control" ng-model="longitude" required>
     </div>
     <button ng-click="saveRestaurant()">{{restaurantDetails}}</button>
   </div>

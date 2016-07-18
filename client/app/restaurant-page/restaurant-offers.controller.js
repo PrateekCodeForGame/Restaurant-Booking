@@ -2,8 +2,8 @@
 (function(){
 
 class RestaurantOffersComponent {
-  constructor($scope) {
-    $scope.images = ["offer1.jpg", "offer2.jpg", "offer3.jpg", "offer4.jpg"];
+  constructor($scope, Restaurant) {
+    $scope.images = Restaurant.selectedRestaurant.offerImages;
   }
 }
 

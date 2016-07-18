@@ -4,11 +4,11 @@
 
   class MainController {
 
-    constructor($http, $scope, socket, restaurant) {
+    constructor($http, $scope, socket, Restaurant) {
       this.$http = $http;
       this.socket = socket;
       this.awesomeThings = [];
-      if(restaurant.restaurants.length == 0) {
+      if(Restaurant.restaurants.length == 0) {
         $http({
           url: "/api/restaurants",
           method: "GET",
@@ -17,7 +17,7 @@
         });
       }
       else {
-        $scope.mainRestaurants = restaurant.restaurants;
+        $scope.mainRestaurants = Restaurant.restaurants;
       };
 
       $scope.$on('$destroy', function() {
