@@ -4,6 +4,26 @@ angular.module('restaurantBookingApp')
   .factory('Restaurant', function ($http, $q) {
     var factory = {};
     factory.restaurants = [];
+    factory.cuisines = [
+      "Grekiskt",
+      "Havets lackerheter",
+      "Husmankost",
+      "Indiskt",
+      "Italienskt",
+      "Japansk",
+      "Kafe",
+      "Kinesiskt",
+      "Mexikanskt",
+      "Spanskt",
+      "Sydamerikanskt",
+      "Thailandskt",
+      "Vegetariskt",
+    ];
+    factory.locations = [
+      "Goteburg",
+      "Lulea",
+      "Stockholm",
+    ];
     factory.selectedRestaurant = {};
     $http({
       url: "/api/restaurants",

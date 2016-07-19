@@ -3,7 +3,7 @@
 (function() {
 
   class AdminController {
-    constructor(User, Auth, $scope, $http, Upload) {
+    constructor(User, Auth, $scope, $http, Upload, Restaurant) {
       // Use the User $resource to fetch all users
       this.users = User.query();
       this.getCurrentUser = Auth.getCurrentUser;
@@ -22,12 +22,13 @@
         $scope.restaurantDetails = "Update Restaurant";
       });
 
+      $scope.cuisines = Restaurant.cuisines;
+      $scope.locations = Restaurant.locations;
       $scope.saveRestaurant = function() {
         $scope.restaurant["owner"] = $scope.owner;
         $scope.restaurant["location"] = [];
         $scope.restaurant["location"].push($scope.latitude);
         $scope.restaurant["location"].push($scope.longitude);
-        console.log("....................", $scope.restaurant);
         if($scope.restaurantDetails == "Add new Restaurant") {
           $http({
             url: "/api/restaurants",

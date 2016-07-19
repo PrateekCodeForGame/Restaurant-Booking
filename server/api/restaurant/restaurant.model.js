@@ -13,7 +13,7 @@ var RestaurantSchema = new mongoose.Schema({
   tableBooking: Boolean,
   headerImage: [String],
   images: [String],
-  // amenities: String,
+  cuisine: String,
   summary: String,
   socialMedia: String,
   openTimings: String,

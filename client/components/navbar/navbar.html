@@ -33,12 +33,11 @@
       Restaurant Name"></input></div>
       <div class="col-md-2"><i class="glyphicon glyphicon-map-marker icon-space"></i><input class="navbar-textbox-style " type="text" ng-model="location" placeholder="Location"></div>
       <div class="col-md-2">
-        <select class="navbar-dropdown-style" ui-select2 multiple ng-model="selectedTags" placeholder="All Categories">
-          <option value=""></option>
-          <option ng-repeat="number in countries" value="{{number}}">{{number}}</option>
+        <select class="navbar-textbox-style" ng-options="key for key in cuisines" ng-model="selectedCuisine">
+          <option value="">Select Cuisine</option>
         </select>
       </div>
-      <div class="col-md-2"><button class="navbar-button-style">Sök restaurang</button></div>
+      <div class="col-md-2"><button class="navbar-button-style" ng-click="search()">Sök restaurang</button></div>
     </div>
   </div>
 </div>

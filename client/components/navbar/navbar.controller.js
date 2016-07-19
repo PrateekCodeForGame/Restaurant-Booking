@@ -10,10 +10,25 @@ class NavbarController {
   isCollapsed = true;
   //end-non-standard
 
-  constructor(Auth) {
+  constructor(Auth, $scope, Restaurant, $state) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
+    $scope.cuisines = Restaurant.cuisines;
+    $scope.location = "";
+    $scope.selectedCuisine = "";
+
+    $scope.search = function() {
+      var l = $scope.location;
+      var c = $scope.selectedCuisine;
+      if (l == "") {
+        l = "All";
+      };
+      if (c == "") {
+        c = "All";
+      };
+      $state.go("search", {location: l, cuisine: c});
+    }
   }
 }
 

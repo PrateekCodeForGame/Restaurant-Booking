@@ -4,23 +4,40 @@
   </div>
   <div class="row">
     <div class="col-md-5">
-
+      <label class="label-filter"><b>Location</b></label>
+      <div class="limit-filter">
+        <div ng-repeat="(key, value) in locations" class="filters">
+          <input class="location-check" type="checkbox" ng-model="value" ng-click="changeLocationFilter(key, value)">
+          <h6 class="location-label">{{key}}</h6>
+        </div>
+      </div>
+      <label class="label-filter"><b>Cuisine</b></label>
+      <div class="limit-filter">
+        <div ng-repeat="(key, value) in cuisines" class="filters">
+          <input class="location-check" type="checkbox" ng-model="value" ng-click="changeCuisineFilter(key, value)">
+          <h6 class="location-label">{{key}}</h6>
+        </div>
+      </div>
     </div>
     <div class="col-md-7">
-      <div class="row res-list" ng-repeat="res in restaurants" ng-click="gotoRestaurant(res)">
+      <div class="row res-list" ng-repeat="res in filteredRestaurants" ng-click="gotoRestaurant(res)">
         <div class="col-md-3 list-height">
           <img src="assets/images/{{res.headerImage[0]}}" alt="" class="image-thubmnail"/>
         </div>
         <div class="col-md-6 list-height">
-          <rate-yo ng-model="rating" read-only="options.readOnly" options="options"></rate-yo>
+          <rate-yo ng-model="rating" read-only="options.readOnly" options="options" class="star-style"></rate-yo>
           <h4 class="res-title">{{res.restaurantName}}</h4>
           <h6>{{res.addressLine1}}, {{res.addressLine2}}, {{res.city}}</h6>
+          <h5>{{res.cuisine}}</h5>
         </div>
         <div class="col-md-3 list-height">
           <p class="offers">
             {{res.offerImages.length}} Offers
           </p>
         </div>
+      </div>
+      <div ng-hide="filteredRestaurants.length">
+        <h3 class="search-results">No matches found</h3>
       </div>
     </div>
   </div>

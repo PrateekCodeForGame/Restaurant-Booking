@@ -4,7 +4,7 @@ angular.module('restaurantBookingApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('search', {
-        url: '/search/:location/:restaurantName',
+        url: '/search/:location/:cuisine',
         template: '<search></search>'
       });
   });

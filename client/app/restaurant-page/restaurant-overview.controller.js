@@ -5,6 +5,7 @@
     constructor($scope, Restaurant) {
       $scope.imageUrl = Restaurant.selectedRestaurant.images;
       $scope.mainImage = $scope.imageUrl[0];
+      $scope.summary = Restaurant.selectedRestaurant.summary;
 
       $scope.number = 3;
       $scope.getNumber = function() {

@@ -45,9 +45,10 @@
       $scope.dimDisplay = "";
 
       $scope.findRestaurant = function() {
-        if($scope.searchKeyword) {
-          $state.go("search", {location: $scope.searchKeyword, restaurantName: "all"});
-        };
+        if($scope.searchKeyword == "") {
+          $scope.searchKeyword = "All";
+        }
+        $state.go("search", {location: $scope.searchKeyword, cuisine: "All"});
       };
     }
   }

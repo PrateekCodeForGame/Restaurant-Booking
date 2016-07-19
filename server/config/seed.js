@@ -95,6 +95,8 @@ User.find({}).remove()
         tableBooking: true,
         openTimings: "10:00 am - 11:00 pm",
         owner: "admin@example.com",
+        cuisine: "Kafe",
+        summary: "The highly anticipated 14,500 sq ft flagship O&B Café Grill opened in June 2010. With a stylish see and be seen bar, lounge and a wraparound patio facing both Front and Yonge streets, it has since become the destination for the city’s tastemakers, Bay Street’s movers and shakers and the urban dwellers of the neighbourhood. The design of the restaurant is a multi-faceted collaboration between Chef Michael Bonacini and Anacleto Design who has transformed the vast space into intimate gathering spots including the restaurant, bar, and patio with a communal table, tucked away booths, and a loft like dining room. “We took a massive space and infused it with character, charm and charisma through art, lighting and texture,” says designer Lindsey Anacleto a former associate at Yabu Pushelberg, who designed Canoe for O&B.",
         location: [
           "43.461892",
           "-79.686994"
@@ -125,6 +127,8 @@ User.find({}).remove()
         tableBooking: true,
         openTimings: "10:00 am - 11:00 pm",
         owner: "test1@example.com",
+        cuisine: "Kafe",
+        summary: "The highly anticipated 14,500 sq ft flagship O&B Café Grill opened in June 2010. With a stylish see and be seen bar, lounge and a wraparound patio facing both Front and Yonge streets, it has since become the destination for the city’s tastemakers, Bay Street’s movers and shakers and the urban dwellers of the neighbourhood. The design of the restaurant is a multi-faceted collaboration between Chef Michael Bonacini and Anacleto Design who has transformed the vast space into intimate gathering spots including the restaurant, bar, and patio with a communal table, tucked away booths, and a loft like dining room. “We took a massive space and infused it with character, charm and charisma through art, lighting and texture,” says designer Lindsey Anacleto a former associate at Yabu Pushelberg, who designed Canoe for O&B.",
         location: [
           "43.461892",
           "-79.686994"
@@ -155,6 +159,8 @@ User.find({}).remove()
         tableBooking: true,
         openTimings: "10:00 am - 11:00 pm",
         owner: "test2@example.com",
+        cuisine: "Kafe",
+        summary: "The highly anticipated 14,500 sq ft flagship O&B Café Grill opened in June 2010. With a stylish see and be seen bar, lounge and a wraparound patio facing both Front and Yonge streets, it has since become the destination for the city’s tastemakers, Bay Street’s movers and shakers and the urban dwellers of the neighbourhood. The design of the restaurant is a multi-faceted collaboration between Chef Michael Bonacini and Anacleto Design who has transformed the vast space into intimate gathering spots including the restaurant, bar, and patio with a communal table, tucked away booths, and a loft like dining room. “We took a massive space and infused it with character, charm and charisma through art, lighting and texture,” says designer Lindsey Anacleto a former associate at Yabu Pushelberg, who designed Canoe for O&B.",
         location: [
           "43.461892",
           "-79.686994"
@@ -185,6 +191,8 @@ User.find({}).remove()
         tableBooking: true,
         openTimings: "10:00 am - 11:00 pm",
         owner: "test3@example.com",
+        cuisine: "Kafe",
+        summary: "The highly anticipated 14,500 sq ft flagship O&B Café Grill opened in June 2010. With a stylish see and be seen bar, lounge and a wraparound patio facing both Front and Yonge streets, it has since become the destination for the city’s tastemakers, Bay Street’s movers and shakers and the urban dwellers of the neighbourhood. The design of the restaurant is a multi-faceted collaboration between Chef Michael Bonacini and Anacleto Design who has transformed the vast space into intimate gathering spots including the restaurant, bar, and patio with a communal table, tucked away booths, and a loft like dining room. “We took a massive space and infused it with character, charm and charisma through art, lighting and texture,” says designer Lindsey Anacleto a former associate at Yabu Pushelberg, who designed Canoe for O&B.",
         location: [
           "43.461892",
           "-79.686994"
@@ -215,6 +223,8 @@ User.find({}).remove()
         tableBooking: true,
         openTimings: "08:00 am - 10:00 pm",
         owner: "test4@example.com",
+        cuisine: "Kafe",
+        summary: "The highly anticipated 14,500 sq ft flagship O&B Café Grill opened in June 2010. With a stylish see and be seen bar, lounge and a wraparound patio facing both Front and Yonge streets, it has since become the destination for the city’s tastemakers, Bay Street’s movers and shakers and the urban dwellers of the neighbourhood. The design of the restaurant is a multi-faceted collaboration between Chef Michael Bonacini and Anacleto Design who has transformed the vast space into intimate gathering spots including the restaurant, bar, and patio with a communal table, tucked away booths, and a loft like dining room. “We took a massive space and infused it with character, charm and charisma through art, lighting and texture,” says designer Lindsey Anacleto a former associate at Yabu Pushelberg, who designed Canoe for O&B.",
         location: [
           "43.461892",
           "-79.686994"
