@@ -6,10 +6,10 @@
       <div class="row lead-text">
         <div class="col-md-2 navbar-text-style"></div>
         <div class="col-md-6"><i class="glyphicon glyphicon-map-marker icon-space"></i>
-          <input class="navbar-textbox-style search-bar" type="text" ng-model="searchKeyword" placeholder="Enter Location or Restaurant Name">
+          <input class="navbar-textbox-style search-bar" type="text" ng-model="searchKeyword" placeholder="Enter Location">
         </div>
         <div class="col-md-2">
-          <button class="navbar-button-style">Sök restaurang</button>
+          <button class="navbar-button-style" ng-click="findRestaurant()">Sök restaurang</button>
         </div>
         <div class="col-md-2 navbar-text-style"></div>
       </div>

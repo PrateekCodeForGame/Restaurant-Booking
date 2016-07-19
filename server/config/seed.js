@@ -6,6 +6,7 @@
 'use strict';
 import Thing from '../api/thing/thing.model';
 import User from '../api/user/user.model';
+import Restaurant from '../api/restaurant/restaurant.model';
 
 Thing.find({}).remove()
   .then(() => {
@@ -52,8 +53,190 @@ User.find({}).remove()
       name: 'Admin',
       email: 'admin@example.com',
       password: 'admin'
+    }, {
+      provider: 'local',
+      role: 'admin',
+      name: 'Test1',
+      email: 'test1@example.com',
+      password: 'admin'
+    }, {
+      provider: 'local',
+      role: 'admin',
+      name: 'Test2',
+      email: 'test2@example.com',
+      password: 'admin'
+    }, {
+      provider: 'local',
+      role: 'admin',
+      name: 'Test3',
+      email: 'test3@example.com',
+      password: 'admin'
+    }, {
+      provider: 'local',
+      role: 'admin',
+      name: 'Test4',
+      email: 'test4@example.com',
+      password: 'admin'
     })
     .then(() => {
       console.log('finished populating users');
     });
   });
+
+  Restaurant.find({}).remove()
+    .then(() => {
+      Restaurant.create({
+        restaurantName: "Oliver & Bonacini Cafe Grill",
+        addressLine1: "240 Leighland Avenue",
+        addressLine2: "Oakville Ontario",
+        city: "Stockholm",
+        phone: "1234567890",
+        website: "www.google.com",
+        tableBooking: true,
+        openTimings: "10:00 am - 11:00 pm",
+        owner: "admin@example.com",
+        location: [
+          "43.461892",
+          "-79.686994"
+        ],
+        offerImages: [
+          "offer1.jpg",
+          "offer2.jpg",
+          "offer3.jpg",
+          "offer4.jpg"
+        ],
+        menuImages: [],
+        images: [
+          "homePageImage.png",
+          "restaurant.jpg",
+          "restaurant-overview.jpg",
+          "stockholm.jpg"
+        ],
+        headerImage: [
+          "restaurant-overview.jpg"
+        ]
+      }, {
+        restaurantName: "Test1 Cafe Grill",
+        addressLine1: "240 Leighland Avenue",
+        addressLine2: "Oakville Ontario",
+        city: "Stockholm",
+        phone: "1234567890",
+        website: "www.google.com",
+        tableBooking: true,
+        openTimings: "10:00 am - 11:00 pm",
+        owner: "test1@example.com",
+        location: [
+          "43.461892",
+          "-79.686994"
+        ],
+        offerImages: [
+          "offer1.jpg",
+          "offer2.jpg",
+          "offer3.jpg",
+          "offer4.jpg"
+        ],
+        menuImages: [],
+        images: [
+          "homePageImage.png",
+          "restaurant.jpg",
+          "restaurant-overview.jpg",
+          "stockholm.jpg"
+        ],
+        headerImage: [
+          "restaurant-overview.jpg"
+        ]
+      }, {
+        restaurantName: "Test2 Cafe Grill",
+        addressLine1: "240 Leighland Avenue",
+        addressLine2: "Oakville Ontario",
+        city: "Stockholm",
+        phone: "1234567890",
+        website: "www.google.com",
+        tableBooking: true,
+        openTimings: "10:00 am - 11:00 pm",
+        owner: "test2@example.com",
+        location: [
+          "43.461892",
+          "-79.686994"
+        ],
+        offerImages: [
+          "offer1.jpg",
+          "offer2.jpg",
+          "offer3.jpg",
+          "offer4.jpg"
+        ],
+        menuImages: [],
+        images: [
+          "homePageImage.png",
+          "restaurant.jpg",
+          "restaurant-overview.jpg",
+          "stockholm.jpg"
+        ],
+        headerImage: [
+          "restaurant-overview.jpg"
+        ]
+      }, {
+        restaurantName: "Test3 Cafe Grill",
+        addressLine1: "240 Leighland Avenue",
+        addressLine2: "Oakville Ontario",
+        city: "Lulea",
+        phone: "1234567890",
+        website: "www.google.com",
+        tableBooking: true,
+        openTimings: "10:00 am - 11:00 pm",
+        owner: "test3@example.com",
+        location: [
+          "43.461892",
+          "-79.686994"
+        ],
+        offerImages: [
+          "offer1.jpg",
+          "offer2.jpg",
+          "offer3.jpg",
+          "offer4.jpg"
+        ],
+        menuImages: [],
+        images: [
+          "homePageImage.png",
+          "restaurant.jpg",
+          "restaurant-overview.jpg",
+          "stockholm.jpg"
+        ],
+        headerImage: [
+          "restaurant-overview.jpg"
+        ]
+      }, {
+        restaurantName: "Test4 Cafe Grill",
+        addressLine1: "240 Leighland Avenue",
+        addressLine2: "Oakville Ontario",
+        city: "Goteburg",
+        phone: "1234567890",
+        website: "www.google.com",
+        tableBooking: true,
+        openTimings: "08:00 am - 10:00 pm",
+        owner: "test4@example.com",
+        location: [
+          "43.461892",
+          "-79.686994"
+        ],
+        offerImages: [
+          "offer1.jpg",
+          "offer2.jpg",
+          "offer3.jpg",
+          "offer4.jpg"
+        ],
+        menuImages: [],
+        images: [
+          "homePageImage.png",
+          "restaurant.jpg",
+          "restaurant-overview.jpg",
+          "stockholm.jpg"
+        ],
+        headerImage: [
+          "restaurant-overview.jpg"
+        ]
+      })
+      .then(() => {
+        console.log('finished populating restaurants');
+      });
+    });

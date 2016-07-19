@@ -1,0 +1,27 @@
+<div class="background-search">
+  <div class="row search-results">
+    <h3>Search Results</h3>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+
+    </div>
+    <div class="col-md-7">
+      <div class="row res-list" ng-repeat="res in restaurants" ng-click="gotoRestaurant(res)">
+        <div class="col-md-3 list-height">
+          <img src="assets/images/{{res.headerImage[0]}}" alt="" class="image-thubmnail"/>
+        </div>
+        <div class="col-md-6 list-height">
+          <rate-yo ng-model="rating" read-only="options.readOnly" options="options"></rate-yo>
+          <h4 class="res-title">{{res.restaurantName}}</h4>
+          <h6>{{res.addressLine1}}, {{res.addressLine2}}, {{res.city}}</h6>
+        </div>
+        <div class="col-md-3 list-height">
+          <p class="offers">
+            {{res.offerImages.length}} Offers
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

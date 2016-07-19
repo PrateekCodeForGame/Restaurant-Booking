@@ -4,10 +4,11 @@
 
   class MainController {
 
-    constructor($http, $scope, socket, Restaurant) {
+    constructor($http, $scope, socket, Restaurant, $state) {
       this.$http = $http;
       this.socket = socket;
       this.awesomeThings = [];
+      $scope.searchKeyword = "";
       if(Restaurant.restaurants.length == 0) {
         $http({
           url: "/api/restaurants",
@@ -40,10 +41,14 @@
       $scope.starDeal = "Steak, fries & a glass of Rioja for £22 per person"
       $scope.cityImages =["stockholm.jpg", "goteborg.jpg", "malmo.jpg", "lulea.jpg"];
 
-      $scope.countries = ["Afghanistan", "Pakistan", "India", "fghanistan", "Pakstan", "Idia", "Afghanitan", "Pastan", "dia"];
-
       $scope.showView = "hidden";
       $scope.dimDisplay = "";
+
+      $scope.findRestaurant = function() {
+        if($scope.searchKeyword) {
+          $state.go("search", {location: $scope.searchKeyword, restaurantName: "all"});
+        };
+      };
     }
   }
 

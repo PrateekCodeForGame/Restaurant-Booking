@@ -12,15 +12,17 @@ angular.module('restaurantBookingApp')
       factory.restaurants = response.data;
     });
 
-
     factory.getAllRestaurants = function() {
+      var deferred = $q.defer();
       $http({
         url: "/api/restaurants",
         method: "GET",
       }).then(function(response) {
         factory.restaurants = response.data;
-        return factory;
+        deferred.resolve(factory.restaurants);
       });
+
+      return deferred.promise;
     };
 
     factory.find = function(id) {
