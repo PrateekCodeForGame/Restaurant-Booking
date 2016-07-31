@@ -4,11 +4,15 @@
 
   class MainController {
 
-    constructor($http, $scope, socket, Restaurant, $state) {
+    constructor(Auth, $http, $scope, socket, Restaurant, $state) {
       this.$http = $http;
       this.socket = socket;
       this.awesomeThings = [];
       $scope.searchKeyword = "";
+      $scope.locations = Restaurant.locations;
+      $scope.selectedTab1 = "selectedtab";
+      $scope.selectedTab2 = false;
+      $scope.selectedTab3 = false;
       if(Restaurant.restaurants.length == 0) {
         $http({
           url: "/api/restaurants",
@@ -48,8 +52,13 @@
         if($scope.searchKeyword == "") {
           $scope.searchKeyword = "All";
         }
-        $state.go("search", {location: $scope.searchKeyword, cuisine: "All"});
+        $state.go("search", {restaurant: "All", location: $scope.searchKeyword, cuisine: "All"});
       };
+
+      $scope.searchCity = function(city) {
+        var searchcity = city.split('.')[0];
+        $state.go("search", {restaurant: "All", location: searchcity, cuisine: "All"});
+      }
     }
   }
 

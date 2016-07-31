@@ -82,6 +82,16 @@ export function showOwnerWise(req, res) {
     .catch(handleError(res));
 }
 
+// Implement like command for restaurants
+export function showRestaurant(req, res) {
+  var searchPhrase = req.params.name;
+  var regularExpression = new RegExp(".*" + searchPhrase + ".*");
+  return Restaurant.find({"restaurantName": regularExpression}).exec()
+    .then(handleEntityNotFound(res))
+    .then(respondWithResult(res))
+    .catch(handleError(res));
+}
+
 // Creates a new Restaurant in the DB
 export function create(req, res) {
   return Restaurant.create(req.body)

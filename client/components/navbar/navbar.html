@@ -1,4 +1,4 @@
-<div  ng-controller="NavbarController" style="overflow: hidden;">
+<div  ng-controller="NavbarController" class="navbar-top">
   <div class="navbar navbar-static-top navbar-color navbar-padding">
     <div class="container">
       <div class="navbar-header">
@@ -12,7 +12,7 @@
       </div>
       <div id="navbar-main">
         <ul class="nav navbar-nav">
-          <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="admin" class="navbar-text-color">Restaurant</a></li>
+          <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="admin" class="navbar-text-color">Restaurant Info</a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
@@ -25,10 +25,9 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2 navbar-text-style">Browse Categories</div>
-      <div class="col-md-2 navbar-text-style">Controlpanel</div>
+    <div class="row bg-white">
+      <div class="col-md-2 navbar-text-style">För resturanger</div>
+      <div class="col-md-2 navbar-text-style"></div>
       <div class="col-md-2"><input class="navbar-textbox-style" type="text" ng-model="restaurantName" placeholder="
       Restaurant Name"></input></div>
       <div class="col-md-2"><i class="glyphicon glyphicon-map-marker icon-space"></i><input class="navbar-textbox-style " type="text" ng-model="location" placeholder="Location"></div>
@@ -39,5 +38,4 @@
       </div>
       <div class="col-md-2"><button class="navbar-button-style" ng-click="search()">Sök restaurang</button></div>
     </div>
-  </div>
 </div>

@@ -17,21 +17,21 @@
   </header>
   <div class="container">
     <div class="row">
-      <div class="col-md-3 info-text grow">
-        <span><i class="glyphicon glyphicon-map-marker icon-style"></i></span>
+      <div class="col-md-3 info-text grow" ng-class="selectedTab1" ng-click="selectedTab1 = 'selectedtab';selectedTab2 = false; selectedTab3 = false;">
+        <span><i class="fa fa-truck icon-style"></i></span>
         <br />
-        <p class="info-header-style">Restauranger nära dig</p>
-        <br />
-        <!-- <p class="info-text-style">Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p> -->
-      </div>
-      <div class="col-md-3 info-text grow">
-        <span><i class="glyphicon glyphicon-credit-card icon-style"></i></span>
-        <br />
-        <p class="info-header-style">Unika erbjudanden</p>
+        <p class="info-header-style">Hemkorning</p>
         <br />
         <!-- <p class="info-text-style">Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p> -->
       </div>
-      <div class="col-md-3 info-text grow">
+      <div class="col-md-3 info-text grow" ng-class="selectedTab2" ng-click="selectedTab1 = false;selectedTab2 = 'selectedtab'; selectedTab3 = false;">
+        <span><i class="fa fa-support icon-style"></i></span>
+        <br />
+        <p class="info-header-style">Boka bord</p>
+        <br />
+        <!-- <p class="info-text-style">Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p> -->
+      </div>
+      <div class="col-md-3 info-text grow" ng-class="selectedTab3" ng-click="selectedTab1 = false;selectedTab2 = false; selectedTab3 = 'selectedtab';">
         <span><i class="glyphicon glyphicon-list-alt icon-style"></i></span>
         <br />
         <p class="info-header-style">Restauranger nära dig</p>
@@ -39,15 +39,28 @@
         <!-- <p class="info-text-style">Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p> -->
       </div>
     </div>
+    <div class="row tab-text" ng-show="selectedTab1">
+      <p>Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p>
+    </div>
+    <div class="row tab-text" ng-show="selectedTab2">
+      <p>Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p>
+    </div>
+    <div class="row tab-text" ng-show="selectedTab3">
+      <p>Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p>
+    </div>
   </div>
   <div class="container">
     <div class="row">
       <div class="col-md-3" ng-repeat="image in cityImages">
-        <img src="assets/images/{{image}}" width="100%" height="180px">
+        <img src="assets/images/{{image}}" width="100%" height="180px" ng-click="searchCity(image)">
       </div>
     </div>
     <div class="row space">
-      <h3 class="restaurant-list-heading">Fler Städer</h3>
+      <div class="text-center">
+        <select class="city-dropdown" ng-options="key for key in locations" ng-model="selectedLocation" ng-change="searchCity(selectedLocation)">
+          <option value="">Fler Städer</option>
+        </select>
+      </div>
     </div>
   </div>
   <div class="container">

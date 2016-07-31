@@ -3,9 +3,9 @@
 (function() {
 
   class AdminController {
-    constructor(User, Auth, $scope, $http, Upload, Restaurant) {
+    constructor(User, Auth, $scope, $http, Upload, Restaurant, $window) {
       // Use the User $resource to fetch all users
-      this.users = User.query();
+      // this.users = User.query();
       this.getCurrentUser = Auth.getCurrentUser;
       $scope.owner = this.getCurrentUser().email;
       $scope.restaurant = {};
@@ -35,6 +35,8 @@
             method: "POST",
             data: $scope.restaurant
           }).then(function(response) {
+            $window.alert("Restaurant added");
+            $window.location.reload();
           });
         }
         else {
@@ -48,6 +50,8 @@
               method: "POST",
               data: $scope.restaurant
             }).then(function(response) {
+              $window.alert("Restaurant updated");
+              $window.location.reload();
             });
           });
         }

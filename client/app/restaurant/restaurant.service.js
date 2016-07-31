@@ -20,9 +20,10 @@ angular.module('restaurantBookingApp')
       "Vegetariskt",
     ];
     factory.locations = [
-      "Goteburg",
+      "Goteborg",
       "Lulea",
       "Stockholm",
+      "Malmo"
     ];
     factory.selectedRestaurant = {};
     $http({

@@ -21,13 +21,17 @@ class NavbarController {
     $scope.search = function() {
       var l = $scope.location;
       var c = $scope.selectedCuisine;
+      var r = $scope.restaurantName;
       if (l == "") {
         l = "All";
       };
       if (c == "") {
         c = "All";
       };
-      $state.go("search", {location: l, cuisine: c});
+      if (r == "") {
+        r = "All";
+      };
+      $state.go("search", {restaurant: r, location: l, cuisine: c});
     }
   }
 }
