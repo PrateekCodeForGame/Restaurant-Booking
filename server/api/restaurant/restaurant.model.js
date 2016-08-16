@@ -19,7 +19,9 @@ var RestaurantSchema = new mongoose.Schema({
   openTimings: String,
   menuImages: [String],
   offerImages: [String],
-  location: [String]
+  location: [String],
+  items: [String],
+  price: [Number]
 });
 
 export default mongoose.model('Restaurant', RestaurantSchema);

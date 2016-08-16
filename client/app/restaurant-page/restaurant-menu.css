@@ -1,0 +1,13 @@
+.bg-color {
+  background-color: white;
+  padding: 15px;
+}
+.scroller {
+  max-height: 1310px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.checkout {
+  height: 45px !important;
+  padding: 5px !important;
+}

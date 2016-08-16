@@ -2,10 +2,22 @@
 (function() {
 
   class RestaurantOverviewComponent {
-    constructor($scope, Restaurant) {
-      $scope.imageUrl = Restaurant.selectedRestaurant.images;
-      $scope.mainImage = $scope.imageUrl[0];
-      $scope.summary = Restaurant.selectedRestaurant.summary;
+    constructor($scope, Restaurant, $http) {
+      if(Restaurant.selectedRestaurant) {
+        $scope.imageUrl = Restaurant.selectedRestaurant.images;
+        $scope.mainImage = $scope.imageUrl[0];
+        $scope.summary = Restaurant.selectedRestaurant.summary;
+      }
+      else {
+        $http({
+          url: "/api/restaurants/" + Restaurant.selectedId,
+          method: "GET",
+        }).then(function(response) {
+          $scope.imageUrl = response.data.images;
+          $scope.mainImage = $scope.imageUrl[0];
+          $scope.summary = response.data.summary;
+        });
+      };
 
       $scope.number = 3;
       $scope.getNumber = function() {

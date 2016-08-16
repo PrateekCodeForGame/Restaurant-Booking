@@ -26,6 +26,7 @@ angular.module('restaurantBookingApp')
       "Malmo"
     ];
     factory.selectedRestaurant = {};
+    factory.selectedId = "";
     $http({
       url: "/api/restaurants",
       method: "GET",
@@ -47,6 +48,7 @@ angular.module('restaurantBookingApp')
     };
 
     factory.find = function(id) {
+      factory.selectedId = id;
       var deferred = $q.defer();
       $http({
         url: "/api/restaurants/" + id,

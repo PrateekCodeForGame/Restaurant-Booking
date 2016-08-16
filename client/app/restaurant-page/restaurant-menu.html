@@ -1,1 +1,59 @@
-<div>This is the restaurant-menu view.{{message}}</div>
+<div class="bg-color">
+<div class="row">
+  <div class="col-md-4">
+    <p><b>
+    Item
+  </b></p>
+  </div>
+  <div class="col-md-4">
+    <p><b>
+    Price
+  </b></p>
+  </div>
+  <div class="col-md-4">
+    <p><b>
+      Quantity
+    </b></p>
+  </div>
+</div>
+<div class="scroller">
+<div class="row" ng-repeat="i in items track by $index">
+  <div class="col-md-4">
+    <p>
+      {{i}}
+    </p>
+  </div>
+    <div class="col-md-4">
+    <p>
+      {{price[$index]}}
+    </p>
+  </div>
+  <div class="col-md-4">
+    <input type="number" min=0 max=10 ng-model="number">
+  </div>
+</div>
+</div>
+<div>
+  <button type="button" class="navbar-button-style checkout" data-toggle="modal" data-target="#myModal">Checkout</button>
+</div>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>

@@ -12,6 +12,8 @@
       $scope.restaurantDetails = "Add new Restaurant";
       $scope.latitude = "";
       $scope.longitude = "";
+      $scope.item = "";
+      $scope.price = "";
       $http({
         url: "/api/restaurants/owner/" + $scope.owner,
         method: "GET",
@@ -97,6 +99,24 @@
             $scope.restaurant["images"].push(value.filename);
           });
         });
+      };
+
+      $scope.addFood = function() {
+        $scope.restaurant["items"].push($scope.item);
+        $scope.restaurant["price"].push($scope.price);
+        $http({
+          url: "/api/restaurants/" + $scope.restaurant._id,
+          method: "DELETE",
+          data: $scope.restaurant
+        }).then(function(response) {
+          $http({
+            url: "/api/restaurants",
+            method: "POST",
+            data: $scope.restaurant
+          });
+        });
+        $scope.item = null;
+        $scope.price = null;
       };
 
       $scope.uploadOfferFiles = function(files, errFiles) {

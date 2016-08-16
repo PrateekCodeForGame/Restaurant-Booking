@@ -2,8 +2,9 @@
 (function(){
 
 class RestaurantMenuComponent {
-  constructor($scope) {
-    $scope.message = 'Hello';
+  constructor($scope, Restaurant) {
+    $scope.items = Restaurant.selectedRestaurant.items;
+    $scope.price = Restaurant.selectedRestaurant.price;
   }
 }
 

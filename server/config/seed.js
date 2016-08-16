@@ -128,7 +128,9 @@ Restaurant.find({}).remove()
         ],
         headerImage: [
           "restaurant-overview.jpg"
-        ]
+        ],
+        items: ["Pasta", "Burger", "Pizza", "Platter"],
+        price: [20, 10, 15, 30]
       }, {
         restaurantName: "Test1 Cafe Grill",
         addressLine1: "240 Leighland Avenue",
@@ -160,7 +162,9 @@ Restaurant.find({}).remove()
         ],
         headerImage: [
           "restaurant-overview.jpg"
-        ]
+        ],
+        items: ["Pasta", "Burger", "Pizza", "Platter"],
+        price: [20, 10, 15, 30]
       }, {
         restaurantName: "Test2 Cafe Grill",
         addressLine1: "240 Leighland Avenue",
@@ -192,7 +196,9 @@ Restaurant.find({}).remove()
         ],
         headerImage: [
           "restaurant-overview.jpg"
-        ]
+        ],
+        items: ["Pasta", "Burger", "Pizza", "Platter"],
+        price: [20, 10, 15, 30]
       }, {
         restaurantName: "Test3 Cafe Grill",
         addressLine1: "240 Leighland Avenue",
@@ -224,7 +230,9 @@ Restaurant.find({}).remove()
         ],
         headerImage: [
           "restaurant-overview.jpg"
-        ]
+        ],
+        items: ["Pasta", "Burger", "Pizza", "Platter"],
+        price: [20, 10, 15, 30]
       }, {
         restaurantName: "Test4 Cafe Grill",
         addressLine1: "240 Leighland Avenue",
@@ -256,7 +264,9 @@ Restaurant.find({}).remove()
         ],
         headerImage: [
           "restaurant-overview.jpg"
-        ]
+        ],
+        items: ["Pasta", "Burger", "Pizza", "Platter"],
+        price: [20, 10, 15, 30]
       }, {
         restaurantName: "Test5 Cafe Grill",
         addressLine1: "240 Leighland Avenue",
@@ -288,7 +298,9 @@ Restaurant.find({}).remove()
         ],
         headerImage: [
           "restaurant-overview.jpg"
-        ]
+        ],
+        items: ["Pasta", "Burger", "Pizza", "Platter"],
+        price: [20, 10, 15, 30]
       }, {
         restaurantName: "Test6 Cafe Grill",
         addressLine1: "240 Leighland Avenue",
@@ -320,7 +332,9 @@ Restaurant.find({}).remove()
         ],
         headerImage: [
           "restaurant-overview.jpg"
-        ]
+        ],
+        items: ["Pasta", "Burger", "Pizza", "Platter"],
+        price: [20, 10, 15, 30]
       })
       .then(() => {
         console.log('finished populating restaurants');
