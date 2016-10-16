@@ -12,41 +12,41 @@
   <div>
     <label>{{restaurantDetails}}</label>
     <div class="form-group">
-      <label>Restaurant Name</label>
+      <label>Restaurangens namn</label>
 
       <input type="text" class="form-control" ng-model="restaurant.restaurantName" required>
     </div>
     <div class="form-group">
-      <label>Address Line 1</label>
+      <label>Adresslinje 1</label>
 
       <input type="text" class="form-control" ng-model="restaurant.addressLine1" required>
     </div>
     <div class="form-group">
-      <label>Address Line 2</label>
+      <label>Adresslinje 2</label>
 
       <input type="text" class="form-control" ng-model="restaurant.addressLine2" required>
     </div>
     <div class="form-group">
-      <label>City</label>
+      <label>Ort</label>
 
       <select class="form-control" ng-options="key for key in locations" ng-model="restaurant.city">
         <option></option>
       </select>
     </div>
     <div class="form-group">
-      <label>Cuisine</label>
+      <label>Välj Mattyp</label>
 
       <select class="form-control" ng-options="key for key in cuisines" ng-model="restaurant.cuisine">
         <option></option>
       </select>
     </div>
     <div class="form-group">
-      <label>Phone Number</label>
+      <label>Telefon</label>
 
       <input type="text" class="form-control" ng-model="restaurant.phone" required>
     </div>
     <div class="form-group">
-      <label>Website</label>
+      <label>Hemsida</label>
 
       <input type="text" class="form-control" ng-model="restaurant.website" required>
     </div>
@@ -56,12 +56,12 @@
       <input type="text" class="form-control" ng-model="restaurant.tableBooking" required>
     </div>
     <div class="form-group">
-      <label>Header Image</label>
+      <label>Huvudbild</label>
 
       <input id="images" class="form-control" type="file" name="images" placeholder="Upload the image to be shown as header" accept="image/*" ngf-select="uploadHeaderFiles($files, $invalidFiles)"  ngf-multiple="false"/>
     </div>
     <div class="form-group">
-      <label>Images</label>
+      <label>Bilder</label>
 
       <input id="images" class="form-control" type="file" name="images" placeholder="Upload the images to be shown in restaurant  page" accept="image/*" ngf-select="uploadImageFiles($files, $invalidFiles)"  ngf-multiple="true"/>
     </div>
@@ -71,7 +71,7 @@
       <input type="text" class="form-control" ng-model="vm.user.email" required>
     </div> -->
     <div class="form-group">
-      <label>Summary</label>
+      <label>Sammanfattning</label>
 
       <input type="text" class="form-control" ng-model="restaurant.summary" required>
     </div>
@@ -81,7 +81,7 @@
       <input type="text" class="form-control" ng-model="restaurant.socialMedia" required>
     </div> -->
     <div class="form-group">
-      <label>Open Timings</label>
+      <label>Öppetider</label>
 
       <input type="text" class="form-control" ng-model="restaurant.openTimings" placeholder="hh:mm am/pm - hh:mm am/pm" required>
     </div>
@@ -91,17 +91,17 @@
       <input id="images" class="form-control" type="file" name="images" placeholder="Upload the images to be shown in menu page" accept="image/*" ngf-select="uploadMenuFiles($files, $invalidFiles)"  ngf-multiple="true"/>
     </div> -->
     <div class="form-group">
-      <label>Offer Images</label>
+      <label>Bilder på erbjudanden</label>
 
       <input id="images" class="form-control" type="file" name="images" placeholder="Upload the images to be shown in offer page" accept="image/*" ngf-select="uploadOfferFiles($files, $invalidFiles)"  ngf-multiple="true"/>
     </div>
     <div class="form-group">
-      <label>Location</label>
+      <label>Välj Plats</label>
 
-      <label>Lattitude</label>
+      <label>Lattitud</label>
 
       <input type="text" class="form-control" ng-model="latitude" required>
-      <label>Longitude</label>
+      <label>Longitud</label>
 
       <input type="text" class="form-control" ng-model="longitude" required>
     </div>
@@ -109,14 +109,14 @@
   </div>
 
   <div>
-    <label>Add Menu Items</label>
+    <label>Lägg till rätter till menyn</label>
     <div class="form-group">
       <label>Item Name</label>
 
       <input type="text" class="form-control" ng-model="item" required>
     </div>
     <div class="form-group">
-      <label>Price</label>
+      <label>Pris</label>
 
       <input type="number" class="form-control" ng-model="price" required>
     </div>

@@ -16,8 +16,8 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a class="navbar-text-color" ui-sref="signup">Sign up</a></li>
-          <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a class="navbar-text-color" ui-sref="login">Login</a></li>
+          <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a class="navbar-text-color" ui-sref="signup">Registrera</a></li>
+          <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a class="navbar-text-color" ui-sref="login">Logga In</a></li>
           <li ng-show="nav.isLoggedIn()"><p class="navbar-text navbar-text-color">Hello {{ nav.getCurrentUser().name }}</p> </li>
           <li ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="settings"><span class="glyphicon glyphicon-cog navbar-text-color"></span></a></li>
           <li ng-show="nav.isLoggedIn()"><a class="navbar-text-color" ui-sref="logout">Logout</a></li>
@@ -26,7 +26,7 @@
     </div>
   </div>
     <div class="row bg-white">
-      <div class="col-md-2 navbar-text-style">För resturanger</div>
+      <div class="col-md-2 navbar-text-style pointer-cursor" ng-click="gotoSignup()">För resturanger</div>
       <div class="col-md-2 navbar-text-style"></div>
       <div class="col-md-2"><input class="navbar-textbox-style" type="text" ng-model="restaurantName" placeholder="
       Restaurant Name"></input></div>

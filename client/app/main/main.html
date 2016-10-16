@@ -17,21 +17,21 @@
   </header>
   <div class="container">
     <div class="row">
-      <div class="col-md-3 info-text grow" ng-class="selectedTab1" ng-click="selectedTab1 = 'selectedtab';selectedTab2 = false; selectedTab3 = false;">
+      <div class="col-md-3 info-text" ng-class="selectedTab1" ng-click="selectedTab1 = 'selectedtab';selectedTab2 = false; selectedTab3 = false;">
         <span><i class="fa fa-truck icon-style"></i></span>
         <br />
         <p class="info-header-style">Hemkorning</p>
         <br />
         <!-- <p class="info-text-style">Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p> -->
       </div>
-      <div class="col-md-3 info-text grow" ng-class="selectedTab2" ng-click="selectedTab1 = false;selectedTab2 = 'selectedtab'; selectedTab3 = false;">
+      <div class="col-md-3 info-text" ng-class="selectedTab2" ng-click="selectedTab1 = false;selectedTab2 = 'selectedtab'; selectedTab3 = false;">
         <span><i class="fa fa-support icon-style"></i></span>
         <br />
         <p class="info-header-style">Boka bord</p>
         <br />
         <!-- <p class="info-text-style">Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p> -->
       </div>
-      <div class="col-md-3 info-text grow" ng-class="selectedTab3" ng-click="selectedTab1 = false;selectedTab2 = false; selectedTab3 = 'selectedtab';">
+      <div class="col-md-3 info-text" ng-class="selectedTab3" ng-click="selectedTab1 = false;selectedTab2 = false; selectedTab3 = 'selectedtab';">
         <span><i class="glyphicon glyphicon-list-alt icon-style"></i></span>
         <br />
         <p class="info-header-style">Restauranger nära dig</p>
@@ -43,10 +43,10 @@
       <p>Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p>
     </div>
     <div class="row tab-text" ng-show="selectedTab2">
-      <p>Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
     </div>
     <div class="row tab-text" ng-show="selectedTab3">
-      <p>Hitta enkelt en restuarang nära dig med hjälp av vår positionsspårare. Sugen på kinamat i Kristianstad inga problem!</p>
+      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
     </div>
   </div>
   <div class="container">
@@ -57,7 +57,7 @@
     </div>
     <div class="row space">
       <div class="text-center">
-        <select class="city-dropdown" ng-options="key for key in locations" ng-model="selectedLocation" ng-change="searchCity(selectedLocation)">
+        <select class="city-dropdown pointer-cursor" ng-options="key for key in locations" ng-model="selectedLocation" ng-change="searchCity(selectedLocation)">
           <option value="">Fler Städer</option>
         </select>
       </div>

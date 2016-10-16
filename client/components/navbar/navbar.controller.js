@@ -18,6 +18,10 @@ class NavbarController {
     $scope.location = "";
     $scope.selectedCuisine = "";
 
+    $scope.gotoSignup = function() {
+      $state.go('signup');
+    };
+
     $scope.search = function() {
       var l = $scope.location;
       var c = $scope.selectedCuisine;

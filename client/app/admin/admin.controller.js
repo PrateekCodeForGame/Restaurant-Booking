@@ -9,7 +9,7 @@
       this.getCurrentUser = Auth.getCurrentUser;
       $scope.owner = this.getCurrentUser().email;
       $scope.restaurant = {};
-      $scope.restaurantDetails = "Add new Restaurant";
+      $scope.restaurantDetails = "Lägg till restaurang";
       $scope.latitude = "";
       $scope.longitude = "";
       $scope.item = "";

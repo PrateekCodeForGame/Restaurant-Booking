@@ -96,3 +96,6 @@
 .font-styling {
   font-family: Lato !important;
 }
+.pointer-cursor {
+  cursor: pointer;
+}
